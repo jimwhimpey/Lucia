@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+	<div class="blurb"><p>We are a bicycle racing club based at the University of Queensland in Brisbane, Australia. 
+			Our club has a reputation as one of Australia’s leading clubs and has produced a number of Olympic, 
+			Commonwealth and National Champions.</p></div>
+
 	<div class="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>

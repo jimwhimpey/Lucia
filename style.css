@@ -6,3 +6,114 @@ Author: Jim Whimpey
 Version: 1.0
 Tags: epic, panache, strong
 */
+
+/******************************************************************************/
+/* ERIC MEYER'S CSS RESET */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/******************************************************************************/
+/* FONTS */
+
+@font-face {
+	font-family: 'Homestead';
+	src: url('fonts/Homestead-Regular.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+	}
+
+
+/******************************************************************************/
+/* BODY and WRAPPERS */
+
+html { background: url(images/noise.png); }
+
+	body {
+		width: 1000px;
+		margin: 0 auto;
+		}
+
+	
+/******************************************************************************/
+/* HEADER */
+
+h1.header {
+	height: 130px;
+	width: 1000px;
+	}
+
+	h1.header a {
+		display: block;
+		height: 130px;
+		width: 1000px;
+		background: #ABD4F0 url(images/logo.gif) no-repeat center -145px;
+		text-indent: -9999px;
+		}
+		
+		h1.header a:hover { background-position: center 25px; }
+
+
+/******************************************************************************/
+/* NAV */
+
+div.nav ul {
+	width: 968px;
+	height: 40px;
+	padding: 0 16px;
+	background: #00204F;
+	font-family: Homestead, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	text-transform: uppercase;
+	position: relative;
+	}
+	
+	div.nav ul li {
+		float: left;
+		height: 40px;
+		}
+		
+		div.nav ul li.page-item-11,
+		div.nav ul li.page-item-34 { float: right; }
+		
+		div.nav ul li a {
+			height: 26px;
+			display: block;
+			color: #ABD4F0;
+			text-decoration: none;
+			padding: 14px 16px 0 16px;
+			cursor: pointer;
+			}
+			
+			div.nav ul li a:hover,
+			div.nav ul li.current_page_item a { color: #FFF; }
+			
+		div.nav ul li.current_page_item,
+		div.nav ul li.current_page_parent { background: #193660; }
+	
+	div.nav ul.secondary {
+		background: #193660;
+		}
+
+
+/******************************************************************************/
+/* HOMEPAGE BLURB */
+
+.blurb p {
+	margin: 30px;
+	text-align: center;
+	font-family: Georgia, Times, serif;
+	font-size: 24px;
+	font-style: italic;
+	line-height: 1.6em;
+	}
+
+
+
+
+
+
+
+
+
+
