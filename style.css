@@ -30,8 +30,13 @@ html { background: url(images/noise.png); }
 
 	body {
 		width: 1000px;
-		margin: 0 auto;
+		margin: 0 auto 50px auto;
 		}
+		
+		.main {
+			width: 1000px;
+			overflow: hidden;
+			}
 
 	
 /******************************************************************************/
@@ -100,8 +105,9 @@ div.nav ul {
 /* HOMEPAGE BLURB */
 
 .blurb p {
-	margin: 30px;
+	margin: 30px 30px 40px 30px;
 	text-align: center;
+	text-shadow: #FFF 0 2px 0;
 	font-family: Georgia, Times, serif;
 	font-size: 24px;
 	font-style: italic;
@@ -109,11 +115,29 @@ div.nav ul {
 	}
 
 
+/******************************************************************************/
+/* CONTENT */
+
+.content {
+	float: left;
+	width: 610px;
+	padding: 30px;
+	background: #FFF;
+	background: rgba(255,255,255,0.7);
+	height: 500px;
+	}
 
 
+/******************************************************************************/
+/* SIDEBAR */
 
-
-
-
+.sidebar {
+	float: right;
+	width: 240px;
+	padding: 30px;
+	background: #FFF;
+	background: rgba(255,255,255,0.7);
+	height: 500px;
+	}
 
 
