@@ -37,6 +37,10 @@ html { background: url(images/noise.png); }
 			width: 1000px;
 			overflow: hidden;
 			}
+		
+		a { text-decoration: none; }
+		
+			a:hover { border-bottom: 1px solid blue; }
 
 	
 /******************************************************************************/
@@ -85,7 +89,6 @@ div.nav ul {
 			height: 26px;
 			display: block;
 			color: #ABD4F0;
-			text-decoration: none;
 			padding: 14px 16px 0 16px;
 			cursor: pointer;
 			}
@@ -118,25 +121,81 @@ div.nav ul {
 /******************************************************************************/
 /* CONTENT */
 
-.content {
+.col-a {
 	float: left;
-	width: 610px;
-	padding: 30px;
+	width: 670px;
 	background: #FFF;
 	background: rgba(255,255,255,0.7);
-	height: 500px;
 	}
+
+.content { padding: 0 0 30px 0; }
+	
+	.content h2 {
+		font-size: 30px;
+		font-family: Homestead, Helvetica, sans-serif;
+		margin: 30px 0 30px 30px;
+		color: #00204F;
+		opacity: 0.8;
+		}
+	
+	
+/******************************************************************************/
+/* BLOG */
+
+.post {
+	padding: 0 0 30px 0;
+	margin: 30px 30px 0 30px;
+	border-bottom: 1px solid #ABD4F0;
+	font-family: Georgia, Times, serif;
+	line-height: 1.5em;
+	}
+	
+	.post h3 {
+		font-size: 20px;
+		margin: 0 0 10px 0
+		}
+			
+	.post p,
+	.post ul,
+	.post ol,
+	.post blockquote { 
+		font-size: 15px;
+		margin-bottom: 10px;
+		}
+		
+	.post .meta {
+		border-left: 10px solid #E6E6E6;
+		padding: 0 0 0 10px;
+		color: #999;
+		}
+		
+		.post .meta a { color: #6585FF; }
+
+
+/******************************************************************************/
+/* NAV */
+
+.post-nav {
+	padding: 40px 30px 10px 30px;
+	width: 610px;
+	overflow: hidden;
+	font-size: 18px;
+	}
+	
+	.post-nav a span { font-family: Helvetica, sans-serif; }
 
 
 /******************************************************************************/
 /* SIDEBAR */
 
-.sidebar {
+.col-b {
 	float: right;
-	width: 240px;
-	padding: 30px;
+	width: 300px;
 	background: #FFF;
 	background: rgba(255,255,255,0.7);
+	}
+
+.sidebar {
 	height: 500px;
 	}
 
