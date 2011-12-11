@@ -38,7 +38,8 @@ html { background: url(images/noise.png); }
 			overflow: hidden;
 			}
 		
-		a { text-decoration: none; }
+		a,
+		a:visited { color: blue; text-decoration: none; }
 		
 			a:hover { border-bottom: 1px solid blue; }
 
@@ -130,7 +131,8 @@ div.nav ul {
 
 .content { padding: 0 0 30px 0; }
 	
-	.content h2 {
+	.content h2,
+	.col-b h2 {
 		font-size: 30px;
 		font-family: Homestead, Helvetica, sans-serif;
 		margin: 30px 0 30px 30px;
@@ -194,9 +196,20 @@ div.nav ul {
 	background: #FFF;
 	background: rgba(255,255,255,0.7);
 	}
+	
+	.col-b h2 { font-size: 22px; }
 
-.sidebar {
+
+/******************************************************************************/
+/* EVENTS */
+
+.events {
 	height: 500px;
 	}
+
+	.events .loading {
+		height: 100px;
+		margin: 0 0 30px;
+		}
 
 
