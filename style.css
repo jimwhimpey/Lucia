@@ -31,6 +31,7 @@ html { background: url(images/noise.png); }
 	body {
 		width: 1000px;
 		margin: 0 auto 50px auto;
+		font-family: Georgia, Times, serif;
 		}
 		
 		.main {
@@ -184,7 +185,7 @@ div.nav ul {
 	font-size: 18px;
 	}
 	
-	.post-nav a span { font-family: Helvetica, sans-serif; }
+	.post-nav a span { font-family: Helvetica, Arial sans-serif; }
 
 
 /******************************************************************************/
@@ -197,19 +198,46 @@ div.nav ul {
 	background: rgba(255,255,255,0.7);
 	}
 	
-	.col-b h2 { font-size: 22px; }
+	.col-b h2 { 
+		font-size: 22px;
+		margin: 30px 20px 15px 20px;	
+		}
 
 
 /******************************************************************************/
 /* EVENTS */
 
-.events {
-	height: 500px;
+.events .loading {
+	height: 100px;
+	margin: 0 0 30px;
+	}
+	
+.events table { 
+	margin: 0 20px 15px 20px;
+	width: 260px;	
+	border-top: 1px solid #ABD4F0;
 	}
 
-	.events .loading {
-		height: 100px;
-		margin: 0 0 30px;
+	.events table td {
+		border-bottom: 1px solid #ABD4F0;
+		padding: 5px 0;
+		line-height: 1.5em;
+		font-size: 14px;
 		}
+		
+		.events table td span { display: block; }
+		
+			.events table td span.location {
+				color: #999;
+				font-style: italic;
+				font-size: 13px;
+				}
+				
+			.events table td span.day { font-weight: bold; }
+		
+		.events table td.summary { 
+			width: 180px;
+			padding-right: 10px;	
+			}
 
-
+.events .more { margin: 0 20px 30px 20px; }

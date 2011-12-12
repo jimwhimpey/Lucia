@@ -24,10 +24,10 @@ $(function(){
 			for (var i=0; i < data.items.length; i++) {
 				
 				// Process the date
-				var noTime = false;
+				var time = true;
 				var eventDate;
 				if (data.items[i].start.dateTime == undefined) {
-					noTime = true;
+					time = false;
 					eventDate = new Date(data.items[i].start.date + "T07:00:00+10:00");
 				} else {
 					eventDate = new Date(data.items[i].start.dateTime);
@@ -40,8 +40,10 @@ $(function(){
 					html += "<span class='location'>" + data.items[i].location + "</span>";
 				}
 				html += "</td>";
-				html += "<td class='date'><span class='day'>" + eventDate.getDate() + " " + months[eventDate.getMonth()] + "</span>";
-				html += "<span class='time'>" + event.getDate() + "</span></td>";
+				html += "<td class='date'><span class='day'>" + eventDate.format("jS M") + "</span>";
+				if (time) {
+					html += "<span class='time'>" + eventDate.format("g:iA") + "</span></td>";
+				}
 				html += "</tr>";
 				
 				// Add it to the table
