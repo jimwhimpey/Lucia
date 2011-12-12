@@ -207,11 +207,6 @@ div.nav ul {
 /******************************************************************************/
 /* EVENTS */
 
-.events .loading {
-	height: 100px;
-	margin: 0 0 30px;
-	}
-	
 .events table { 
 	margin: 0 20px 15px 20px;
 	width: 260px;	
