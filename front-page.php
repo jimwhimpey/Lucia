@@ -59,5 +59,7 @@
 		<?php get_template_part('utility-calendar'); ?>
 
 	</div>
+	
+	<?php get_template_part('utility-flickr'); ?>
 
 <?php get_footer(); ?>

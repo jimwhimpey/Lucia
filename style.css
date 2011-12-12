@@ -126,6 +126,7 @@ div.nav ul {
 .col-a {
 	float: left;
 	width: 670px;
+	margin: 0 0 30px 0;
 	background: #FFF;
 	background: rgba(255,255,255,0.7);
 	}
@@ -133,7 +134,8 @@ div.nav ul {
 .content { padding: 0 0 30px 0; }
 	
 	.content h2,
-	.col-b h2 {
+	.col-b h2,
+	.flickr h2 {
 		font-size: 30px;
 		font-family: Homestead, Helvetica, sans-serif;
 		margin: 30px 0 30px 30px;
@@ -194,6 +196,7 @@ div.nav ul {
 .col-b {
 	float: right;
 	width: 300px;
+	margin: 0 0 30px 0;
 	background: #FFF;
 	background: rgba(255,255,255,0.7);
 	}
@@ -236,3 +239,46 @@ div.nav ul {
 			}
 
 .events .more { margin: 0 20px 30px 20px; }
+
+
+/******************************************************************************/
+/* FLICKR PHOTOS */
+
+.flickr {
+	clear: both;
+	background: #FFF;
+	background: rgba(255,255,255,0.7);
+	width: 1000px;
+	padding: 30px 0;
+	}
+	
+	.flickr h2 {
+		font-size: 22px;
+		margin: 0 0 15px 30px;
+		}
+		
+		.flickr h2 a { color: #00204F; }
+			
+			.flickr h2 a:hover { color: #000; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
