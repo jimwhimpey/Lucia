@@ -38,6 +38,7 @@
 										<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'twentyten' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
 									</span>
 								<?php endif; ?>
+								<?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>
 								by <?php the_author(); ?> 
 								| <span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyten' ), __( '1 Comment', 'twentyten' ), __( '% Comments', 'twentyten' ) ); ?></span>
 							</div>
@@ -56,7 +57,8 @@
 			
 		</div>
 		
-		<?php get_template_part('utility-calendar'); ?>
+		<?php get_template_part('utility-calendar'); ?>		
+		<?php get_template_part('utility-sponsors'); ?>
 
 	</div>
 	
