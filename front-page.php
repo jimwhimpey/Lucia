@@ -57,8 +57,7 @@
 			
 		</div>
 		
-		<?php get_template_part('utility-calendar'); ?>		
-		<?php get_template_part('utility-sponsors'); ?>
+		<?php get_template_part('sidebar'); ?>
 
 	</div>
 	

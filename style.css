@@ -110,7 +110,7 @@ div.nav ul {
 /* HOMEPAGE BLURB */
 
 .blurb p {
-	margin: 30px 30px 40px 30px;
+	margin: 30px 30px 10px 30px;
 	text-align: center;
 	text-shadow: #FFF 0 2px 0;
 	font-family: Georgia, Times, serif;
@@ -126,7 +126,7 @@ div.nav ul {
 .col-a {
 	float: left;
 	width: 670px;
-	margin: 0 0 30px 0;
+	margin: 30px 0 0 0;
 	background: #FFF;
 	background: rgba(255,255,255,0.7);
 	}
@@ -159,6 +159,14 @@ div.nav ul {
 		font-size: 20px;
 		margin: 0 0 10px 0
 		}
+		
+	.single h3 {
+		font-size: 30px;
+		font-family: Homestead, Helvetica, sans-serif;
+		margin: 0 0 20px 0;
+		color: #00204F;
+		opacity: 0.8;
+		}
 			
 	.post p,
 	.post ul,
@@ -175,6 +183,52 @@ div.nav ul {
 		}
 		
 		.post .meta a { color: #6585FF; }
+
+
+/******************************************************************************/
+/* COMMENTS */
+
+#comments {
+	margin: 30px 30px 0 30px;
+	padding: 0 0 30px 0;
+	border-bottom: 1px solid #ABD4F0;
+	}
+	
+	#comments h3 {
+		font-family: Georgia, Times, serif;
+		font-size: 22px;
+		margin: 0 0 10px 0
+		}
+		
+		#comments p.comment-notes {
+			font-size: 14px;
+			color: #999;
+			margin: 0 0 15px 0;
+			}
+			
+			#comments label {
+				display: block;
+				margin: 0 0 5px 0;
+				font-size: 14px;
+				}
+			
+			#comments input#email,
+			#comments input#author,
+			#comments input#url,
+			#comments textarea {
+				width: 400px;
+				padding: 5px;
+				margin: 0 0 10px 0;
+				font-size: 16px;
+				font-family: Menlo, Monaco, Consolas, Courier, monospace;
+				}
+				
+			#comments textarea {
+				width: 590px;
+				height: 160px;
+				padding: 10px;
+				border: 1px inset #999;
+				}
 
 
 /******************************************************************************/
@@ -196,7 +250,7 @@ div.nav ul {
 .col-b {
 	float: right;
 	width: 300px;
-	margin: 0 0 30px 0;
+	margin: 30px 0 0 0;
 	background: #FFF;
 	background: rgba(255,255,255,0.7);
 	}
@@ -256,6 +310,7 @@ div.nav ul {
 	background: rgba(255,255,255,0.7);
 	width: 1000px;
 	padding: 30px 0;
+	margin: 30px 0 0 0;
 	}
 	
 	.flickr h2 {
