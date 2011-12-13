@@ -96,7 +96,7 @@ div.nav ul {
 			}
 			
 			div.nav ul li a:hover,
-			div.nav ul li.current_page_item a { color: #FFF; }
+			div.nav ul li.current_page_item a { color: #FFF; border-bottom: none; }
 			
 		div.nav ul li.current_page_item,
 		div.nav ul li.current_page_parent { background: #193660; }
@@ -260,6 +260,23 @@ div.nav ul {
 		.flickr h2 a { color: #00204F; }
 			
 			.flickr h2 a:hover { color: #000; }
+			
+	.flickr ul {
+		width: 940px;
+		padding: 0 30px;
+		}
+	
+		.flickr ul li {
+			width: 180px;
+			margin: 0 10px 0 0;
+			float: left;
+			}
+			
+			.flickr ul li:last-of-type { margin-right: 0; }
+			
+			.flickr ul li a { position: relative; }
+				
+				.flickr ul li a:hover { top: -10px; border-bottom: none; }
 
 
 
