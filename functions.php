@@ -8,7 +8,7 @@
 
 ?>
 
-		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
 				
 			<?php if ( $comment->comment_approved == '0' ) : ?>
 				<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.'); ?></em>
@@ -33,7 +33,6 @@
 
 <?php
 
-		break;
 	}
 	
 ?>

@@ -43,6 +43,9 @@ html { background: url(images/noise.png); }
 		a:visited { color: blue; text-decoration: none; }
 		
 			a:hover { border-bottom: 1px solid blue; }
+			
+		strong { font-weight: bold; }
+		em { font-style: italic; }
 
 	
 /******************************************************************************/
@@ -171,18 +174,55 @@ div.nav ul {
 	.post p,
 	.post ul,
 	.post ol,
-	.post blockquote { 
+	.post blockquote,
+	.comment-content p,
+	.comment-content ul,
+	.comment-content ol,
+	.comment-content blockquote { 
 		font-size: 15px;
 		margin-bottom: 10px;
+		line-height:  1.5em;
 		}
 		
-	.post .meta {
+		.post blockquote {
+			border-left: 5px solid #00204F;
+			margin-left: 20px;
+			padding-left: 20px;
+			color: #003078;
+			font-style: italic;
+			}
+		
+		.post ul,
+		.post ol,
+		.comment-content ul,
+		.comment-content ol { margin-left: 35px; }
+		
+			.post ul,
+			.comment-content ul { list-style: square; }
+			
+			.post ol,
+			.comment-content ol { list-style: decimal; }
+		
+		.entry-content h3,
+		#comments h3 {
+			font-size: 20px;
+			font-family: Georgia, Times, serif;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			margin: 20px 0 10px 0;
+			color: #00204F;
+			}
+		
+	.post .meta,
+	.comment-meta {
 		border-left: 10px solid #E6E6E6;
 		padding: 0 0 0 10px;
 		color: #999;
+		line-height: 1.5em;
 		}
 		
-		.post .meta a { color: #6585FF; }
+		.post .meta a,
+		.comment-meta a { color: #6585FF; }
 
 
 /******************************************************************************/
@@ -230,6 +270,20 @@ div.nav ul {
 				border: 1px inset #999;
 				}
 
+	ol.commentlist {
+		border-bottom: 1px solid #ABD4F0;
+		padding: 0 0 20px 0;
+		margin: 0 0 30px 0;
+		}
+		
+		ol.commentlist li {
+			background:  #FFF;
+			padding: 20px;
+			margin-bottom: 10px;
+			}
+	
+	.logged-in-as { margin: 10px 0 20px 0; }
+
 
 /******************************************************************************/
 /* NAV */
@@ -240,6 +294,10 @@ div.nav ul {
 	overflow: hidden;
 	font-size: 18px;
 	}
+	
+	.post-nav .older { float: left; }
+	
+	.post-nav .newer { float: right; text-align: right; }
 	
 	.post-nav a span { font-family: Helvetica, Arial sans-serif; }
 

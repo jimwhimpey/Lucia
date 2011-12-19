@@ -2,7 +2,8 @@
 
 	<?php if ( have_comments() ) : ?>
 		
-		<h2> <?php printf( _n('1 Comment', '%1$s Comments;', get_comments_number())); ?> </h2>
+		<h3><?php printf( _n( 'One Comment', '%1$s Comments', get_comments_number(), '' ),
+					number_format_i18n(get_comments_number()), '' ); ?></h3>
 
 		<ol class="commentlist">
 			<?php wp_list_comments(array('callback' => 'lucia_comment') ); ?>
