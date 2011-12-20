@@ -4,7 +4,11 @@
 
 		<div class="blog col-a content">
 			
-			<h2>Latest Club News</h2>
+			<?php if (is_category()) { ?>
+				<h2><?php printf( __( 'Category: %s', '' ), single_cat_title('', false )); ?></h2>
+			<?php } else { ?>
+				<h2>Latest Club News</h2>
+			<?php } ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
