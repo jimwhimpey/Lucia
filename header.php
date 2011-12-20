@@ -27,10 +27,10 @@
 			</ul>
 			<?php
   			if($post->post_parent) {
-  				$children = wp_list_pages(array('title_li' => '', 'child_of'  => $post->post_parent, 'echo'  => '0'));
+  				$children = wp_list_pages(array('title_li' => '', 'child_of'  => $post->post_parent, 'echo'  => '0', 'depth' => '1'));
   			} else {
-				$children = wp_list_pages(array('title_li' => '', 'child_of'  => $post->ID, 'echo'  => '0'));
-			}
+					$children = wp_list_pages(array('title_li' => '', 'child_of'  => $post->ID, 'echo'  => '0', 'depth' => '1'));
+				}
   			if ($children) { ?>
   				<ul class="secondary">
   					<?php echo $children; ?>
