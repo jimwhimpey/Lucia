@@ -334,6 +334,12 @@ div.nav ul {
 		font-size: 22px;
 		margin: 30px 20px 15px 20px;	
 		}
+		
+	.col-b ul {
+		list-style: square;
+		margin: 0 20px 20px 40px;
+		line-height: 1.8em
+		}
 
 
 /******************************************************************************/
