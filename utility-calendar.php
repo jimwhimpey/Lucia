@@ -8,7 +8,8 @@
 			date_default_timezone_set("Australia/Brisbane");
 	
 			// Get the Calendar data from Google
-			$contents = file_get_contents("https://www.googleapis.com/calendar/v3/calendars/rabts4o5f0hl2aema0sqsuot78@group.calendar.google.com/events?maxResults=10&timeMin=2011-12-11T01:00:00.000Z&pp=1&key=AIzaSyAQowsWAInPNbY5sMQ9HrWzIBlyeF7pRtI&orderBy=startTime&singleEvents=true");
+			$timeNow = date("Y-m-d\T01:00:00.000\Z", time());
+			$contents = file_get_contents("https://www.googleapis.com/calendar/v3/calendars/rabts4o5f0hl2aema0sqsuot78@group.calendar.google.com/events?maxResults=10&timeMin=" . $timeNow . "&pp=1&key=AIzaSyAQowsWAInPNbY5sMQ9HrWzIBlyeF7pRtI&orderBy=startTime&singleEvents=true");
 			$json = json_decode($contents);
 		
 			// Loop through the results
