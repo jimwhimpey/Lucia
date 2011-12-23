@@ -26,14 +26,30 @@
 				<?php wp_list_pages(array('title_li' => '', 'depth'  => '1')); ?> 
 			</ul>
 			<?php
-  			if($post->post_parent) {
-  				$children = wp_list_pages(array('title_li' => '', 'child_of'  => $post->post_parent, 'echo'  => '0', 'depth' => '1'));
+			
+				// Work out what subnav we want to show
+  			if ($post->post_parent) {
+					// This is a subpage
+					if (count($post->ancestors) > 1) {
+						// This post is 3 levels deep, so show it's grandparent's children as subpages
+						$parent = $post->ancestors[1];
+					} else {
+						// This post is 2 levels deep, show it's parent's subpages in the nav
+						$parent = $post->post_parent;
+					}
   			} else {
-					$children = wp_list_pages(array('title_li' => '', 'child_of'  => $post->ID, 'echo'  => '0', 'depth' => '1'));
+					// If the page is top level, show it's children as usual
+					$parent = $post->ID;
 				}
+				
+				// Get the pages
+				$children = wp_list_pages(array('title_li' => '', 'child_of'  => $parent, 'echo'  => '0', 'depth' => '1'));
+				
+				// If there's subnav, show it
   			if ($children) { ?>
   				<ul class="secondary">
   					<?php echo $children; ?>
   				</ul>
   			<?php } ?>
+				
 		</div>
