@@ -2,7 +2,11 @@
 
 	<div class="main">
 
-		<div class="page post col-a content">
+		<?php if ($post->post_parent == 17) { // If a child of the racing page (i.e. scores) ?>
+			<div class="page post col-a content results-page">
+		<?php } else { ?>
+			<div class="page post col-a content">
+		<?php } ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 

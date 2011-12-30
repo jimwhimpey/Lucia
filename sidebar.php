@@ -5,8 +5,8 @@
 		get_template_part('utility-results');
 	}
 	
-	// If is the contact page or the racing page or a child of the racing page
-	if (!is_page('contact') && !is_page('racing') && $post->post_parent != 17) {
+	// If is the contact page or the racing page or a child of the racing page or the calendar page
+	if (!is_page('contact') && !is_page('racing') && $post->post_parent != 17 && !is_page('calendar')) {
 		get_template_part('utility-calendar');
 	}
 
