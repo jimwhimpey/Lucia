@@ -22,7 +22,10 @@
 				<?php if ( bbp_user_can_view_forum() ) : ?>
 
 					<div id="forum-<?php bbp_forum_id(); ?>" class="bbp-forum-content">
-						<h1 class="entry-title"><?php bbp_forum_title(); ?></h1>
+						
+						<?php bbp_breadcrumb(); ?>
+						
+						<h2 class="entry-title">Forum: <?php bbp_forum_title(); ?></h2>
 						<div class="entry-content">
 
 							<?php bbp_get_template_part( 'bbpress/content', 'single-forum' ); ?>

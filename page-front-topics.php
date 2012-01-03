@@ -20,7 +20,7 @@
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<div id="topics-front" class="bbp-topics-front">
-					<h1 class="entry-title"><?php the_title(); ?></h1>
+					<h2 class="entry-title">Forum: <?php the_title(); ?></h2>
 					<div class="entry-content">
 
 						<?php the_content(); ?>

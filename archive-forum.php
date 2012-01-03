@@ -29,7 +29,7 @@
 		</div>
 		
 		<?php 
-			$sidebar = true;
+			$forum = true;
 			get_sidebar();
 		?>
 	

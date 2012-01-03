@@ -9,7 +9,7 @@
 
 ?>
 
-	<?php bbp_breadcrumb(); ?>
+	<?php // bbp_breadcrumb(); ?>
 
 	<?php if ( post_password_required() ) : ?>
 

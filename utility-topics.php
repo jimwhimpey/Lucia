@@ -1,5 +1,5 @@
 <div class="col-b events">
-	<h2>Latest Topics</h2>
+	<h2>Latest Discussion</h2>
 
 	<?php
 	

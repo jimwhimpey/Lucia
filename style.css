@@ -455,6 +455,49 @@ table.results {
 		table.banana-pairs .position { width: 90px; }
 		table.championship .cancelled { text-decoration: line-through; color: #999; }
 		table.championship .na { color: #999; }
+
+
+/******************************************************************************/
+/* FORUM */
+
+.forum .entry-content { margin: 0 30px; }
+
+	.forum h2 { margin-top: 0; }
+
+		.forum #forum-front h2 { margin-top: 30px; }
+
+	.forum div.bbp-breadcrumb {
+		margin: 30px 30px 5px 30px;
+		font-style:  italic;
+		opacity: 0.5;
+		}
+		
+		.forum div.bbp-breadcrumb p { font-size: 12px; }
+
+	.forum table.bbp-forums { width: 100%; }
+	
+		.forum table.bbp-forums tfoot { display: none; }
+	
+		.forum table.bbp-forums th {
+			padding: 5px;
+			font-weight: bold;
+			background: #FFF;
+			border-bottom: 1px solid #666;
+			border-top: 1px solid #666;
+			text-align: left;
+			}
+	
+		.forum table.bbp-forums td {
+			padding: 10px 5px;
+			border-bottom: 1px solid #DDD;
+			}
+			
+			.forum table.bbp-forums .bbp-forum-info { width: 300px; }
+			.forum table.bbp-forums .bbp-forum-topic-count,
+			.forum table.bbp-forums .bbp-forum-reply-count { width: 80px; text-align: center; }
+			.forum table.bbp-forums .bbp-forum-freshness { text-align: right; }
+			
+			.forum table.bbp-forums td ul { margin-bottom: 0; }
 		
 
 

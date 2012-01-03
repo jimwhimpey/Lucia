@@ -18,7 +18,7 @@
 			<?php do_action( 'bbp_template_notices' ); ?>
 
 			<div id="topic-front" class="bbp-topics-front">
-				<h1 class="entry-title"><?php bbp_topic_archive_title(); ?></h1>
+				<h2 class="entry-title">Forum: <?php bbp_topic_archive_title(); ?></h2>
 				<div class="entry-content">
 
 					<?php bbp_get_template_part( 'bbpress/content', 'archive-topic' ); ?>
