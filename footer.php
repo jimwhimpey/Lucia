@@ -1,9 +1,3 @@
-<?php
-/**
- * @package Lucia
- */
-?>
-
 		<div class="footer">
 			Site by <a href="http://jimwhimpey.com">Jim Whimpey</a>
 		</div><!-- #footer -->

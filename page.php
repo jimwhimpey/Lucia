@@ -2,6 +2,8 @@
 
 	<div class="main">
 
+		<?php // echo "<pre>"; print_r($post); echo "</pre>"; ?>
+
 		<?php if ($post->post_parent == 17) { // If a child of the racing page (i.e. scores) ?>
 			<div class="page post col-a content results-page">
 		<?php } else { ?>
@@ -24,8 +26,8 @@
 		
 		</div>
 		
-		<?php get_template_part('sidebar'); ?>
-
-	</div>
+		<?php get_sidebar(); ?>
+		
+	</div>		
 
 <?php get_footer(); ?>

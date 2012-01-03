@@ -24,6 +24,7 @@
 		<div class="nav">
 			<ul class="primary">
 				<?php wp_list_pages(array('title_li' => '', 'depth'  => '1')); ?> 
+				<li class="page_item page-item-34 <?php if ($post->post_type == 'forum' || $post->post_type == 'topic') { echo "current_page_item"; } ?>"><a href="<?php bloginfo('url'); ?>/forum/">Forum</a></li>
 			</ul>
 			<?php
 			
@@ -42,7 +43,6 @@
 					$parent = $post->ID;
 				}
 				
-				// Get the pages
 				$children = wp_list_pages(array('title_li' => '', 'child_of'  => $parent, 'echo'  => '0', 'depth' => '1'));
 				
 				// If there's subnav, show it
