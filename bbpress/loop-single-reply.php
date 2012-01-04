@@ -11,10 +11,8 @@
 
 	<tr class="bbp-reply-header">
 		<td colspan="2">
-
-			<?php printf( __( '%1$s at %2$s', 'bbpress' ), get_the_date(), esc_attr( get_the_time() ) ); ?>
-
-			<a href="<?php bbp_reply_url(); ?>" title="<?php bbp_reply_title(); ?>" class="bbp-reply-permalink">#<?php bbp_reply_id(); ?></a>
+			
+			<a href="<?php bbp_reply_url(); ?>" title="<?php bbp_reply_title(); ?>" class="bbp-reply-permalink"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp')) . " ago"; ?></a>
 
 			<?php do_action( 'bbp_theme_before_reply_admin_links' ); ?>
 
@@ -31,13 +29,13 @@
 
 			<?php do_action( 'bbp_theme_before_reply_author_details' ); ?>
 
-			<?php bbp_reply_author_link( array( 'sep' => '<br />' ) ); ?>
+			<?php bbp_reply_author_link( array( 'sep' => '' ) ); ?>
 
 			<?php if ( is_super_admin() ) : ?>
 
 				<?php do_action( 'bbp_theme_before_reply_author_admin_details' ); ?>
 
-				<div class="bbp-reply-ip"><?php bbp_author_ip( bbp_get_reply_id() ); ?></div>
+				<div class="bbp-reply-ip"><?php // bbp_author_ip( bbp_get_reply_id() ); ?></div>
 
 				<?php do_action( 'bbp_theme_after_reply_author_admin_details' ); ?>
 

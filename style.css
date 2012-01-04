@@ -466,7 +466,8 @@ table.results {
 
 		.forum #forum-front h2 { margin-top: 30px; }
 
-	.forum p.bbp-forum-description { font-size: 14px; }
+	.forum p.bbp-forum-description,
+	.forum p.bbp-topic-description { font-size: 14px; }
 
 	.forum div.bbp-breadcrumb {
 		margin: 30px 30px 5px 30px;
@@ -488,7 +489,8 @@ table.results {
 	
 		.forum table tfoot { display: none; }
 	
-		.forum table th {
+		.forum table th,
+		.forum .bbp-reply-header td {
 			padding: 5px;
 			font-weight: bold;
 			background: #FFF;
@@ -496,27 +498,57 @@ table.results {
 			border-top: 1px solid #666;
 			text-align: left;
 			}
+			
+			.forum .bbp-reply-header td { 
+				font-weight: normal;
+				border-bottom: 1px solid #DDD;
+				}
 	
 		.forum table td {
 			padding: 10px 5px;
 			border-bottom: 1px solid #DDD;
 			}
 			
-			.forum table .bbp-forum-info { width: 300px; }
+			.forum table .bbp-forum-info,
+			.forum table .bbp-topic-title { width: 300px; }
 			.forum table .bbp-forum-topic-count,
-			.forum table .bbp-forum-reply-count { width: 80px; text-align: center; }
-			.forum table .bbp-forum-freshness { text-align: right; }
+			.forum table .bbp-forum-reply-count,
+			.forum table .bbp-topic-voice-count,
+			.forum table .bbp-topic-reply-count { width: 80px; text-align: center; }
+			.forum table .bbp-forum-freshness, 
+			.forum table .bbp-topic-freshness { text-align: right; }
 			
 			.forum table td ul { margin-bottom: 0; }
+	
+	.forum .bbp-replies { margin: 0 0 10px 0; }
+	
+		.forum .bbp-replies td.bbp-reply-author,
+		.forum .bbp-replies td.bbp-reply-content { border-bottom: 1px solid #666; }
+		
+		.forum .bbp-replies td.bbp-reply-author { width: 120px; }
+		
+		.forum .bbp-admin-links { 
+			float: right;
+			font-size: 14px;
+			opacity: 0.4;
+			}
 			
-	.forum .bbp-topic-form { 
+	.forum .bbp-pagination {
+		text-align: right;
+		opacity: 0.4;
+		font-size: 14px;
+		}
+	
+	.forum .bbp-topic-form,
+	.forum .bbp-reply-form { 
 		margin-top: 40px;
 		padding: 20px;
 		border: 1px solid #999;
 		background: #EEE;
 		}
 		
-		.forum .bbp-topic-form legend { 
+		.forum .bbp-topic-form legend,
+		.forum .bbp-reply-form legend { 
 			display: block;
 			font-size: 20px;
 			font-family: Helvetica, Arial, serif;
@@ -525,16 +557,19 @@ table.results {
 			color: #000;
 			}
 			
-		.forum .bbp-topic-form .bbp-template-notice { display: none; }
+		.forum .bbp-topic-form .bbp-template-notice,
+		.forum .bbp-reply-form .bbp-template-notice { display: none; }
 		
-		.forum .bbp-topic-form label {
+		.forum .bbp-topic-form label,
+		.forum .bbp-reply-form label {
 			display: block;
 			margin: 0 0 5px 0;
 			font-size: 14px;
 			}
 			
 		.forum .bbp-topic-form input#bbp_topic_title,
-		.forum .bbp-topic-form textarea {
+		.forum .bbp-topic-form textarea,
+		.forum .bbp-reply-form textarea {
 			width: 400px;
 			padding: 5px;
 			margin: 0 0 10px 0;
@@ -542,16 +577,16 @@ table.results {
 			font-family: Menlo, Monaco, Consolas, Courier, monospace;
 			}
 
-			.forum .bbp-topic-form label.notify-label { display: inline; }
+			.forum .bbp-topic-form label.notify-label,
+			.forum .bbp-reply-form label.notify-label { display: inline; }
 				
-			.forum .bbp-topic-form textarea {
+			.forum .bbp-topic-form textarea,
+			.forum .bbp-reply-form textarea {
 				width: 545px;
 				height: 160px;
 				padding: 10px;
 				border: 1px inset #999;
 				}
-		
-		
 		
 
 

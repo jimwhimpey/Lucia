@@ -53,7 +53,7 @@
 						<?php do_action( 'bbp_theme_before_reply_form_content' ); ?>
 
 						<p>
-							<label for="bbp_reply_content"><?php _e( 'Reply:', 'bbpress' ); ?></label><br />
+							<label for="bbp_reply_content"><?php _e( 'Reply:', 'bbpress' ); ?></label>
 							<textarea id="bbp_reply_content" tabindex="<?php bbp_tab_index(); ?>" name="bbp_reply_content" rows="6"><?php bbp_form_reply_content(); ?></textarea>
 						</p>
 
@@ -62,7 +62,7 @@
 						<?php if ( !current_user_can( 'unfiltered_html' ) ) : ?>
 
 							<p class="form-allowed-tags">
-								<label><?php _e( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:','bbpress' ); ?></label><br />
+								<label><?php _e( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:','bbpress' ); ?></label>
 								<code><?php bbp_allowed_tags(); ?></code>
 							</p>
 
@@ -70,10 +70,10 @@
 
 						<?php do_action( 'bbp_theme_before_reply_form_tags' ); ?>
 
-						<p>
-							<label for="bbp_topic_tags"><?php _e( 'Tags:', 'bbpress' ); ?></label><br />
+						<!--<p>
+							<label for="bbp_topic_tags"><?php _e( 'Tags:', 'bbpress' ); ?></label>
 							<input type="text" value="<?php bbp_form_topic_tags(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="40" name="bbp_topic_tags" id="bbp_topic_tags" <?php disabled( bbp_is_topic_spam() ); ?> />
-						</p>
+						</p>-->
 
 						<?php do_action( 'bbp_theme_after_reply_form_tags' ); ?>
 
@@ -87,11 +87,11 @@
 
 								<?php if ( bbp_is_reply_edit() && $post->post_author != bbp_get_current_user_id() ) : ?>
 
-									<label for="bbp_topic_subscription"><?php _e( 'Notify the author of follow-up replies via email', 'bbpress' ); ?></label>
+									<label for="bbp_topic_subscription" class="notify-label"><?php _e( 'Notify the author of follow-up replies via email', 'bbpress' ); ?></label>
 
 								<?php else : ?>
 
-									<label for="bbp_topic_subscription"><?php _e( 'Notify me of follow-up replies via email', 'bbpress' ); ?></label>
+									<label for="bbp_topic_subscription" class="notify-label"><?php _e( 'Notify me of follow-up replies via email', 'bbpress' ); ?></label>
 
 								<?php endif; ?>
 
@@ -109,11 +109,11 @@
 								<legend><?php _e( 'Revision', 'bbpress' ); ?></legend>
 								<div>
 									<input name="bbp_log_reply_edit" id="bbp_log_reply_edit" type="checkbox" value="1" <?php bbp_form_reply_log_edit(); ?> tabindex="<?php bbp_tab_index(); ?>" />
-									<label for="bbp_log_reply_edit"><?php _e( 'Keep a log of this edit:', 'bbpress' ); ?></label><br />
+									<label for="bbp_log_reply_edit"><?php _e( 'Keep a log of this edit:', 'bbpress' ); ?></label>
 								</div>
 
 								<div>
-									<label for="bbp_reply_edit_reason"><?php printf( __( 'Optional reason for editing:', 'bbpress' ), bbp_get_current_user_name() ); ?></label><br />
+									<label for="bbp_reply_edit_reason"><?php printf( __( 'Optional reason for editing:', 'bbpress' ), bbp_get_current_user_name() ); ?></label>
 									<input type="text" value="<?php bbp_form_reply_edit_reason(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="40" name="bbp_reply_edit_reason" id="bbp_reply_edit_reason" />
 								</div>
 							</fieldset>

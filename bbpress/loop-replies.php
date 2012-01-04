@@ -12,28 +12,6 @@
 	<?php do_action( 'bbp_template_before_replies_loop' ); ?>
 
 	<table class="bbp-replies" id="topic-<?php bbp_topic_id(); ?>-replies">
-		<thead>
-			<tr>
-				<th class="bbp-reply-author"><?php  _e( 'Author',  'bbpress' ); ?></th>
-				<th class="bbp-reply-content">
-
-					<?php if ( !bbp_show_lead_topic() ) : ?>
-
-						<?php _e( 'Posts', 'bbpress' ); ?>
-
-						<?php bbp_user_subscribe_link(); ?>
-
-						<?php bbp_user_favorites_link(); ?>
-
-					<?php else : ?>
-
-						<?php _e( 'Replies', 'bbpress' ); ?>
-
-					<?php endif; ?>
-
-				</th>
-			</tr>
-		</thead>
 
 		<tfoot>
 			<tr>
