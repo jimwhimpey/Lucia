@@ -122,7 +122,7 @@
 
 						<?php else : ?>
 
-							<?php bbp_topic_admin_links(); ?>
+							<?php // bbp_topic_admin_links(); ?>
 
 						<?php endif; ?>
 

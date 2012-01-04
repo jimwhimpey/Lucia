@@ -462,20 +462,23 @@ table.results {
 
 .forum .entry-content { margin: 0 30px; }
 
-	.forum h2 { margin-top: 0; }
+	.forum h2 { margin-bottom: 5px; }
 
 		.forum #forum-front h2 { margin-top: 30px; }
 
 	.forum p.bbp-forum-description,
-	.forum p.bbp-topic-description { font-size: 14px; }
+	.forum p.bbp-topic-description { 
+		font-size: 14px;
+		text-align: right;
+		opacity: 0.2;
+		}
 
 	.forum div.bbp-breadcrumb {
-		margin: 30px 30px 5px 30px;
-		font-style:  italic;
-		opacity: 0.5;
+		margin: 0 30px 30px 30px;
+		font-style: italic
 		}
 		
-		.forum div.bbp-breadcrumb p { font-size: 12px; }
+		.forum div.bbp-breadcrumb p { font-size: 14px; }
 
 	.forum .no-content {
 		border-top: 1px solid #DDD;
@@ -523,7 +526,11 @@ table.results {
 	.forum .bbp-replies { margin: 0 0 10px 0; }
 	
 		.forum .bbp-replies td.bbp-reply-author,
-		.forum .bbp-replies td.bbp-reply-content { border-bottom: 1px solid #666; }
+		.forum .bbp-replies td.bbp-reply-content { 
+			border-bottom: 1px solid #666;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			}
 		
 		.forum .bbp-replies td.bbp-reply-author { width: 120px; }
 		

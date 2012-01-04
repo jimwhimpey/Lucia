@@ -23,9 +23,9 @@
 
 					<div id="bbp-topic-wrapper-<?php bbp_topic_id(); ?>" class="bbp-topic-wrapper">
 						
+						<h2 class="entry-title">Forum</h2>
 						<?php bbp_breadcrumb(); ?>
 						
-						<h2 class="entry-title">Forum: <?php bbp_topic_title(); ?></h2>
 						<div class="entry-content">
 
 							<?php bbp_get_template_part( 'bbpress/content', 'single-topic' ); ?>
