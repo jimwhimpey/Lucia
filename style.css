@@ -466,6 +466,8 @@ table.results {
 
 		.forum #forum-front h2 { margin-top: 30px; }
 
+	.forum p.bbp-forum-description { font-size: 14px; }
+
 	.forum div.bbp-breadcrumb {
 		margin: 30px 30px 5px 30px;
 		font-style:  italic;
@@ -474,11 +476,19 @@ table.results {
 		
 		.forum div.bbp-breadcrumb p { font-size: 12px; }
 
-	.forum table.bbp-forums { width: 100%; }
+	.forum .no-content {
+		border-top: 1px solid #DDD;
+		border-bottom: 1px solid #DDD;
+		padding: 100px 0;
+		text-align: center;
+		font-style: italic;
+		}
+
+	.forum table { width: 100%; }
 	
-		.forum table.bbp-forums tfoot { display: none; }
+		.forum table tfoot { display: none; }
 	
-		.forum table.bbp-forums th {
+		.forum table th {
 			padding: 5px;
 			font-weight: bold;
 			background: #FFF;
@@ -487,17 +497,61 @@ table.results {
 			text-align: left;
 			}
 	
-		.forum table.bbp-forums td {
+		.forum table td {
 			padding: 10px 5px;
 			border-bottom: 1px solid #DDD;
 			}
 			
-			.forum table.bbp-forums .bbp-forum-info { width: 300px; }
-			.forum table.bbp-forums .bbp-forum-topic-count,
-			.forum table.bbp-forums .bbp-forum-reply-count { width: 80px; text-align: center; }
-			.forum table.bbp-forums .bbp-forum-freshness { text-align: right; }
+			.forum table .bbp-forum-info { width: 300px; }
+			.forum table .bbp-forum-topic-count,
+			.forum table .bbp-forum-reply-count { width: 80px; text-align: center; }
+			.forum table .bbp-forum-freshness { text-align: right; }
 			
-			.forum table.bbp-forums td ul { margin-bottom: 0; }
+			.forum table td ul { margin-bottom: 0; }
+			
+	.forum .bbp-topic-form { 
+		margin-top: 40px;
+		padding: 20px;
+		border: 1px solid #999;
+		background: #EEE;
+		}
+		
+		.forum .bbp-topic-form legend { 
+			display: block;
+			font-size: 20px;
+			font-family: Helvetica, Arial, serif;
+			font-weight: bold;
+			padding: 0 0 20px 0;
+			color: #000;
+			}
+			
+		.forum .bbp-topic-form .bbp-template-notice { display: none; }
+		
+		.forum .bbp-topic-form label {
+			display: block;
+			margin: 0 0 5px 0;
+			font-size: 14px;
+			}
+			
+		.forum .bbp-topic-form input#bbp_topic_title,
+		.forum .bbp-topic-form textarea {
+			width: 400px;
+			padding: 5px;
+			margin: 0 0 10px 0;
+			font-size: 16px;
+			font-family: Menlo, Monaco, Consolas, Courier, monospace;
+			}
+
+			.forum .bbp-topic-form label.notify-label { display: inline; }
+				
+			.forum .bbp-topic-form textarea {
+				width: 545px;
+				height: 160px;
+				padding: 10px;
+				border: 1px inset #999;
+				}
+		
+		
 		
 
 

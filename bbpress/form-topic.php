@@ -70,7 +70,7 @@
 						<?php do_action( 'bbp_theme_before_topic_form_title' ); ?>
 
 						<p>
-							<label for="bbp_topic_title"><?php printf( __( 'Topic Title (Maximum Length: %d):', 'bbpress' ), bbp_get_title_max_length() ); ?></label><br />
+							<label for="bbp_topic_title"><?php printf( __( 'Topic Title (Maximum Length: %d):', 'bbpress' ), bbp_get_title_max_length() ); ?></label>
 							<input type="text" id="bbp_topic_title" value="<?php bbp_form_topic_title(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="40" name="bbp_topic_title" maxlength="<?php bbp_title_max_length(); ?>" />
 						</p>
 
@@ -79,7 +79,7 @@
 						<?php do_action( 'bbp_theme_before_topic_form_content' ); ?>
 
 						<p>
-							<label for="bbp_topic_content"><?php _e( 'Topic Description:', 'bbpress' ); ?></label><br />
+							<label for="bbp_topic_content"><?php _e( 'Topic Description:', 'bbpress' ); ?></label>
 							<textarea id="bbp_topic_content" tabindex="<?php bbp_tab_index(); ?>" name="bbp_topic_content" cols="60" rows="6"><?php bbp_form_topic_content(); ?></textarea>
 						</p>
 
@@ -88,7 +88,7 @@
 						<?php if ( !current_user_can( 'unfiltered_html' ) ) : ?>
 
 							<p class="form-allowed-tags">
-								<label><?php _e( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:','bbpress' ); ?></label><br />
+								<label><?php _e( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:','bbpress' ); ?></label>
 								<code><?php bbp_allowed_tags(); ?></code>
 							</p>
 
@@ -96,10 +96,10 @@
 
 						<?php do_action( 'bbp_theme_before_topic_form_tags' ); ?>
 
-						<p>
-							<label for="bbp_topic_tags"><?php _e( 'Topic Tags:', 'bbpress' ); ?></label><br />
+						<!--<p>
+							<label for="bbp_topic_tags"><?php _e( 'Topic Tags:', 'bbpress' ); ?></label>
 							<input type="text" value="<?php bbp_form_topic_tags(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="40" name="bbp_topic_tags" id="bbp_topic_tags" <?php disabled( bbp_is_topic_spam() ); ?> />
-						</p>
+						</p>-->
 
 						<?php do_action( 'bbp_theme_after_topic_form_tags' ); ?>
 
@@ -108,7 +108,7 @@
 							<?php do_action( 'bbp_theme_before_topic_form_forum' ); ?>
 
 							<p>
-								<label for="bbp_forum_id"><?php _e( 'Forum:', 'bbpress' ); ?></label><br />
+								<label for="bbp_forum_id"><?php _e( 'Forum:', 'bbpress' ); ?></label>
 								<?php bbp_dropdown( array( 'selected' => bbp_get_form_topic_forum() ) ); ?>
 							</p>
 
@@ -120,13 +120,13 @@
 
 							<?php do_action( 'bbp_theme_before_topic_form_type' ); ?>
 
-							<p>
+							<!--<p>
 
-								<label for="bbp_stick_topic"><?php _e( 'Topic Type:', 'bbpress' ); ?></label><br />
+								<label for="bbp_stick_topic"><?php _e( 'Topic Type:', 'bbpress' ); ?></label>
 
 								<?php bbp_topic_type_select(); ?>
 
-							</p>
+							</p>-->
 
 							<?php do_action( 'bbp_theme_after_topic_form_type' ); ?>
 
@@ -141,11 +141,11 @@
 
 								<?php if ( bbp_is_topic_edit() && ( $post->post_author != bbp_get_current_user_id() ) ) : ?>
 
-									<label for="bbp_topic_subscription"><?php _e( 'Notify the author of follow-up replies via email', 'bbpress' ); ?></label>
+									<label class='notify-label' for="bbp_topic_subscription"><?php _e( 'Notify the author of follow-up replies via email', 'bbpress' ); ?></label>
 
 								<?php else : ?>
 
-									<label for="bbp_topic_subscription"><?php _e( 'Notify me of follow-up replies via email', 'bbpress' ); ?></label>
+									<label class='notify-label' for="bbp_topic_subscription"><?php _e( 'Notify me of follow-up replies via email', 'bbpress' ); ?></label>
 
 								<?php endif; ?>
 							</p>
@@ -162,7 +162,7 @@
 								<legend><?php _e( 'Revision', 'bbpress' ); ?></legend>
 								<div>
 									<input name="bbp_log_topic_edit" id="bbp_log_topic_edit" type="checkbox" value="1" <?php bbp_form_topic_log_edit(); ?> tabindex="<?php bbp_tab_index(); ?>" />
-									<label for="bbp_log_topic_edit"><?php _e( 'Keep a log of this edit:', 'bbpress' ); ?></label><br />
+									<label for="bbp_log_topic_edit"><?php _e( 'Keep a log of this edit:', 'bbpress' ); ?></label>
 								</div>
 
 								<div>
