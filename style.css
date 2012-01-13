@@ -467,16 +467,17 @@ table.results {
 		.forum #forum-front h2 { margin-top: 30px; }
 
 	.forum p.bbp-forum-description,
-	.forum p.bbp-topic-description { 
-		font-size: 14px;
-		text-align: right;
-		opacity: 0.2;
-		}
+	.forum p.bbp-topic-description { display: none; }
 
 	.forum div.bbp-breadcrumb {
 		margin: 0 30px 30px 30px;
 		font-style: italic
 		}
+		
+		.forum div.bbp-breadcrumb span.bbp-breadcrumb-current {
+			font-weight: bold;
+			font-style: normal;
+			}
 		
 		.forum div.bbp-breadcrumb p { font-size: 14px; }
 
@@ -533,6 +534,8 @@ table.results {
 			}
 		
 		.forum .bbp-replies td.bbp-reply-author { width: 120px; }
+		
+		.forum .bbp-replies .bbp-reply-permalink { color: #000; font-weight: bold; font-size: 14px; }
 		
 		.forum .bbp-admin-links { 
 			float: right;
@@ -594,7 +597,32 @@ table.results {
 				padding: 10px;
 				border: 1px inset #999;
 				}
+
 		
+/******************************************************************************/
+/* LATEST TOPIC SIDEBAR */
+
+.latest-topics ul {
+	list-style: none;
+	margin: 0 0 20px 20px;
+	}
+		
+	.latest-topics li {
+		line-height: 1em;
+		margin: 0 0 15px 0;
+		}
+		
+		.latest-topics li span {
+			margin: 5px 0 0 0;
+			display: block;
+			color: #666;
+			}
+
+			.latest-topics li span span {
+				display: inline;
+				font-style: italic;
+				color: #000;
+				}
 
 
 /******************************************************************************/

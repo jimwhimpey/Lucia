@@ -1,4 +1,4 @@
-<div class="col-b events">
+<div class="col-b latest-topics">
 	<h2>Latest Discussion</h2>
 
 	<?php
@@ -10,7 +10,7 @@
 		// Loop through and list them
 		while ( $topics->have_posts() ) : $topics->the_post();
 			echo "<li><a href='" . get_permalink() . "'>" . get_the_title() . "</a> ";
-			echo "<span>" . human_time_diff( get_the_time('U'), current_time('timestamp') ) . " ago" . "</span>";
+			echo "<span>" . human_time_diff( get_the_time('U'), current_time('timestamp') ) . " ago by <span>" . get_the_author() . "</span></span>";
 			echo "</li>";
 		endwhile;
 		echo "</ul>";
