@@ -5,6 +5,25 @@
 
 	add_theme_support('bbpress');
 	
+	/******************************************************************************/
+	/* BBPRESS MARKDOWN FILTERS */
+	
+	remove_filter('pre_post','bb_autop',60);
+	remove_filter('pre_post','force_balance_tags');
+	remove_filter('pre_post','bb_encode_bad',10);
+	remove_filter('pre_post','bb_code_trick',10);
+	remove_filter('post_text','make_clickable');
+	remove_filter('edit_text','bb_code_trick_reverse',10);
+	remove_filter('edit_text','htmlspecialchars',10);
+	remove_filter('pre_post','bb_filter_kses',50);
+	add_filter('post_text','Markdown', 6);
+	add_filter('post_text','force_balance_tags',9);
+	add_filter('post_text', 'mdwp_hide_tags', 49);
+	add_filter('post_text','bb_filter_kses',50);
+	add_filter('post_text', 'mdwp_show_tags', 51);
+	add_filter('bbp_get_reply_content', 'Markdown', 20);
+	add_filter( 'bb_allowed_tags', 'allow_extra_markdown_tags' );
+	
 
 	/******************************************************************************/
 	/* COMMENTS LIST */

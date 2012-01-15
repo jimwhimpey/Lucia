@@ -49,7 +49,7 @@
 
 			<?php do_action( 'bbp_theme_after_reply_content' ); ?>
 
-			<?php bbp_reply_content(); ?>
+			<?php echo Markdown(bbp_get_reply_content()); ?>
 
 			<?php do_action( 'bbp_theme_before_reply_content' ); ?>
 
