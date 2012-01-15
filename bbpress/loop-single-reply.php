@@ -15,6 +15,10 @@
 			<a href="<?php bbp_reply_url(); ?>" title="<?php bbp_reply_title(); ?>" class="bbp-reply-permalink"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp')) . " ago"; ?></a>
 
 			<?php do_action( 'bbp_theme_before_reply_admin_links' ); ?>
+			
+			<span class="bbp-admin-links">
+				&nbsp;| <a class="quotes_link" href="javascript:void(null)" title="<?php bbp_reply_author(); ?>">Quote</a>
+			</span>
 
 			<?php bbp_reply_admin_links(); ?>
 
