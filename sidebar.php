@@ -1,7 +1,13 @@
 <?php
 	
+	// Determine if we're on a forum page
+	global $forum;
+	if ($post->post_type == 'forum' || $post->post_type == 'topic' || $post->post_type == 'reply' || $forum == true) {
+		$is_forum = true;
+	}
+	
 	// If we're on a forum page
-	if ($post->post_type == 'forum' || $post->post_type == 'topic' || $post->post_type == 'reply') {
+	if ($is_forum) {
 		get_template_part('utility-topics');
 	}
 
@@ -11,7 +17,7 @@
 	}
 	
 	// If is the contact page or the racing page or a child of the racing page or the calendar page, not forum
-	if (!is_page('contact') && !is_page('racing') && $post->post_parent != 17 && !is_page('calendar') && $post->post_type != 'forum' && $post->post_type != 'topic' && $post->post_type != 'reply') {
+	if (!is_page('contact') && !is_page('racing') && $post->post_parent != 17 && !is_page('calendar') && !$is_forum) {
 		get_template_part('utility-calendar');
 	}
 

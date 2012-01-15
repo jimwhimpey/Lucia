@@ -16,9 +16,7 @@
 			<?php bbp_set_query_name( 'bbp_user_profile_subscriptions' ); ?>
 
 			<div id="bbp-author-subscriptions" class="bbp-author-subscriptions">
-				<hr />
-				<h2 class="entry-title"><?php _e( 'Subscribed Forum Topics', 'bbpress' ); ?></h2>
-				<div class="entry-content">
+				<h3 class="entry-title"><?php _e( 'Subscribed Forum Topics', 'bbpress' ); ?></h3>
 
 					<?php if ( bbp_get_user_subscriptions() ) :
 
@@ -32,7 +30,6 @@
 
 					<?php endif; ?>
 
-				</div>
 			</div><!-- #bbp-author-subscriptions -->
 
 			<?php bbp_reset_query_name(); ?>

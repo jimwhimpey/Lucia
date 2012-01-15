@@ -18,7 +18,7 @@
 	bbp_get_template_part( 'bbpress/user', 'subscriptions'  );
 
 	// Favorite topics
-	bbp_get_template_part( 'bbpress/user', 'favorites'      );
+	// bbp_get_template_part( 'bbpress/user', 'favorites'      );
 
 	// Topics created
 	bbp_get_template_part( 'bbpress/user', 'topics-created' );

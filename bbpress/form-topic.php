@@ -11,7 +11,7 @@
 
 	<?php if ( !bbp_is_single_forum() ) : ?>
 
-		<?php bbp_breadcrumb(); ?>
+		<?php // bbp_breadcrumb(); ?>
 
 	<?php endif; ?>
 

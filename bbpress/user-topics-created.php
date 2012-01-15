@@ -12,9 +12,7 @@
 	<?php bbp_set_query_name( 'bbp_user_profile_topics_created' ); ?>
 
 	<div id="bbp-author-topics-started" class="bbp-author-topics-started">
-		<hr />
-		<h2 class="entry-title"><?php _e( 'Forum Topics Created', 'bbpress' ); ?></h2>
-		<div class="entry-content">
+		<h3 class="entry-title"><?php _e( 'Forum Topics Created', 'bbpress' ); ?></h3>
 
 			<?php if ( bbp_get_user_topics_started() ) :
 
@@ -28,7 +26,6 @@
 
 			<?php endif; ?>
 
-		</div>
 	</div><!-- #bbp-author-topics-started -->
 
 	<?php bbp_reset_query_name(); ?>

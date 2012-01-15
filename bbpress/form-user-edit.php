@@ -11,12 +11,11 @@
 
 <form id="bbp-your-profile" action="<?php bbp_user_profile_edit_url( bbp_get_displayed_user_id() ); ?>" method="post">
 
-	<h2 class="entry-title"><?php _e( 'Name', 'bbpress' ) ?></h2>
+	<h3 class="entry-title"><?php _e( 'Name', 'bbpress' ) ?></h3>
 
 	<?php do_action( 'bbp_user_edit_before' ); ?>
 
 	<fieldset class="bbp-form">
-		<legend><?php _e( 'Name', 'bbpress' ) ?></legend>
 
 		<?php do_action( 'bbp_user_edit_before_name' ); ?>
 
@@ -46,10 +45,9 @@
 
 	</fieldset>
 
-	<h2 class="entry-title"><?php _e( 'Contact Info', 'bbpress' ) ?></h2>
+	<h3 class="entry-title"><?php _e( 'Contact Info', 'bbpress' ) ?></h3>
 
 	<fieldset class="bbp-form">
-		<legend><?php _e( 'Contact Info', 'bbpress' ) ?></legend>
 
 		<?php do_action( 'bbp_user_edit_before_contact' ); ?>
 
@@ -71,34 +69,31 @@
 
 	</fieldset>
 
-	<h2 class="entry-title"><?php bbp_is_user_home() ? _e( 'About Yourself', 'bbpress' ) : _e( 'About the user', 'bbpress' ); ?></h2>
+	<!-- <h3 class="entry-title"><?php bbp_is_user_home() ? _e( 'About Yourself', 'bbpress' ) : _e( 'About the user', 'bbpress' ); ?></h3> -->
+
+	<!-- <fieldset class="bbp-form"> -->
+
+		<!-- <?php do_action( 'bbp_user_edit_before_about' ); ?> -->
+
+		<!-- <div> -->
+			<!-- <label for="description"><?php _e( 'Biographical Info', 'bbpress' ); ?></label> -->
+			<!-- <textarea name="description" id="description" rows="5" cols="30" tabindex="<?php bbp_tab_index(); ?>"><?php echo esc_attr( bbp_get_displayed_user_field( 'description' ) ); ?></textarea> -->
+			<!-- <span class="description"><?php _e( 'Share a little biographical information to fill out your profile. This may be shown publicly.', 'bbpress' ); ?></span> -->
+		<!-- </div> -->
+
+		<!-- <?php do_action( 'bbp_user_edit_after_about' ); ?> -->
+
+	<!-- </fieldset> -->
+
+	<h3 class="entry-title"><?php _e( 'Account' ) ?></h3>
 
 	<fieldset class="bbp-form">
-		<legend><?php bbp_is_user_home() ? _e( 'About Yourself', 'bbpress' ) : _e( 'About the user', 'bbpress' ); ?></legend>
-
-		<?php do_action( 'bbp_user_edit_before_about' ); ?>
-
-		<div>
-			<label for="description"><?php _e( 'Biographical Info', 'bbpress' ); ?></label>
-			<textarea name="description" id="description" rows="5" cols="30" tabindex="<?php bbp_tab_index(); ?>"><?php echo esc_attr( bbp_get_displayed_user_field( 'description' ) ); ?></textarea>
-			<span class="description"><?php _e( 'Share a little biographical information to fill out your profile. This may be shown publicly.', 'bbpress' ); ?></span>
-		</div>
-
-		<?php do_action( 'bbp_user_edit_after_about' ); ?>
-
-	</fieldset>
-
-	<h2 class="entry-title"><?php _e( 'Account' ) ?></h2>
-
-	<fieldset class="bbp-form">
-		<legend><?php _e( 'Account' ) ?></legend>
 
 		<?php do_action( 'bbp_user_edit_before_account' ); ?>
 
 		<div>
-			<label for="user_login"><?php _e( 'Username', 'bbpress' ); ?></label>
+			<label for="user_login"><?php _e( 'Username', 'bbpress' ); ?> <span class="description"><?php _e( '(Usernames cannot be changed)', 'bbpress' ); ?></span></label>
 			<input type="text" name="user_login" id="user_login" value="<?php echo esc_attr( bbp_get_displayed_user_field( 'user_login' ) ); ?>" disabled="disabled" class="regular-text" tabindex="<?php bbp_tab_index(); ?>" />
-			<span class="description"><?php _e( 'Usernames cannot be changed.', 'bbpress' ); ?></span>
 		</div>
 
 		<div>
@@ -123,16 +118,11 @@
 		</div>
 
 		<div id="password">
-			<label for="pass1"><?php _e( 'New Password', 'bbpress' ); ?></label>
+			<label for="pass1"><?php _e( 'New Password', 'bbpress' ); ?> <span class="description"><?php _e( '(If you would like to change the password type a new one. Otherwise leave this blank)', 'bbpress' ); ?></span></label>
 			<fieldset class="bbp-form">
 				<input type="password" name="pass1" id="pass1" size="16" value="" autocomplete="off" tabindex="<?php bbp_tab_index(); ?>" />
-				<span class="description"><?php _e( 'If you would like to change the password type a new one. Otherwise leave this blank.', 'bbpress' ); ?></span>
-
 				<input type="password" name="pass2" id="pass2" size="16" value="" autocomplete="off" tabindex="<?php bbp_tab_index(); ?>" />
-				<span class="description"><?php _e( 'Type your new password again.', 'bbpress' ); ?></span><br />
-
-				<div id="pass-strength-result"></div>
-				<span class="description indicator-hint"><?php _e( 'Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers and symbols like ! " ? $ % ^ &amp; ).', 'bbpress' ); ?></span>
+				<p class="description indicator-hint"><?php _e( 'Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers and symbols like ! " ? $ % ^ &amp; ).', 'bbpress' ); ?></p>
 			</fieldset>
 		</div>
 
@@ -166,7 +156,7 @@
 	<?php do_action( 'bbp_user_edit_after' ); ?>
 
 	<fieldset class="submit">
-		<legend><?php _e( 'Save Changes', 'bbpress' ); ?></legend>
+
 		<div>
 
 			<?php bbp_edit_user_form_fields(); ?>

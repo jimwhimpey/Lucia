@@ -588,7 +588,8 @@ table.results {
 			
 		.forum .bbp-topic-form input#bbp_topic_title,
 		.forum .bbp-topic-form textarea,
-		.forum .bbp-reply-form textarea {
+		.forum .bbp-reply-form textarea,
+		#bbp-your-profile input {
 			width: 400px;
 			padding: 5px;
 			margin: 0 0 10px 0;
@@ -607,6 +608,31 @@ table.results {
 				border: 1px inset #999;
 				}
 
+
+/******************************************************************************/
+/* USER ADMINISTRATION */
+		
+.bbp-single-user .entry-content h3 { margin-top: 50px; }
+
+#bbp-your-profile label {
+	font-size: 15px;
+	line-height: 1;
+	margin: 0 0 5px 0;
+	display: block;
+	}
+	
+	#bbp-your-profile .description {
+		font-size: 13px;
+		color: #999;
+		}
+
+#bbp-your-profile input { margin-bottom: 15px; }		
+
+#bbp-your-profile .submit {
+	margin: 50px 0 0 0;
+	font-size: 20px;
+	}
+		
 		
 /******************************************************************************/
 /* LATEST TOPIC SIDEBAR */
