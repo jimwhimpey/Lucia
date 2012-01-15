@@ -9,7 +9,12 @@
 		echo "<ul>";
 		// Loop through and list them
 		while ( $topics->have_posts() ) : $topics->the_post();
-			echo "<li><a href='" . get_permalink() . "'>" . get_the_title() . "</a> ";
+			// Get the URL pointing to the post
+			if ($post->post_type == "reply") {
+				echo "<li><a href='" . get_permalink($post->post_parent) . "#post-" . get_the_ID() . "'>" . get_the_title() . "</a> ";
+			} else {
+				echo "<li><a href='" . get_permalink() . "'>" . get_the_title() . "</a> ";
+			}
 			echo "<span>" . human_time_diff( get_the_time('U'), current_time('timestamp') ) . " ago by <span>" . get_the_author() . "</span></span>";
 			echo "</li>";
 		endwhile;

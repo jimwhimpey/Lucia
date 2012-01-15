@@ -29,7 +29,7 @@
 
 			<?php do_action( 'bbp_theme_before_reply_author_details' ); ?>
 
-			<?php bbp_reply_author_link( array( 'sep' => '' ) ); ?>
+			<?php bbp_reply_author_link( array( 'sep' => '', 'size' => '80' ) ); ?>
 
 			<?php if ( is_super_admin() ) : ?>
 
