@@ -632,6 +632,11 @@ table.results {
 	margin: 50px 0 0 0;
 	font-size: 20px;
 	}
+	
+#bbp-your-profile .avatar-par img {
+	float: left;
+	margin-right: 10px;
+}
 		
 		
 /******************************************************************************/

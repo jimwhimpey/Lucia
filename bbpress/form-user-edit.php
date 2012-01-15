@@ -47,7 +47,8 @@
 
 	<h3 class="entry-title">Avatars</h3>
 	
-	<p>Avatars are taken from <a href="http://en.gravatar.com/">Gravatar</a> (globally recognised avatar). Register your email 
+	<p class="avatar-par"><?php echo get_avatar(bbp_get_displayed_user_id(), 80); ?>			
+		Avatars are taken from <a href="http://en.gravatar.com/">Gravatar</a> (globally recognised avatar). Register your email 
 		registered on the forum (<?php echo bbp_get_displayed_user_field( 'user_email' ); ?>) to have your avatar appear on the forum.</p>
 	
 
