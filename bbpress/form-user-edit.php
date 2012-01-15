@@ -45,6 +45,12 @@
 
 	</fieldset>
 
+	<h3 class="entry-title">Avatars</h3>
+	
+	<p>Avatars are taken from <a href="http://en.gravatar.com/">Gravatar</a> (globally recognised avatar). Register your email 
+		registered on the forum (<?php echo bbp_get_displayed_user_field( 'user_email' ); ?>) to have your avatar appear on the forum.</p>
+	
+
 	<h3 class="entry-title"><?php _e( 'Contact Info', 'bbpress' ) ?></h3>
 
 	<fieldset class="bbp-form">
@@ -84,6 +90,7 @@
 		<!-- <?php do_action( 'bbp_user_edit_after_about' ); ?> -->
 
 	<!-- </fieldset> -->
+	
 
 	<h3 class="entry-title"><?php _e( 'Account' ) ?></h3>
 
