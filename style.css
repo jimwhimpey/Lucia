@@ -586,6 +586,9 @@ table.results {
 			font-size: 14px;
 			}
 			
+			.forum .bbp-topic-form label span,
+			.forum .bbp-reply-form label span { opacity: 0.5; }
+			
 		.forum .bbp-topic-form input#bbp_topic_title,
 		.forum .bbp-topic-form textarea,
 		.forum .bbp-reply-form textarea,

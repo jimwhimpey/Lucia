@@ -70,7 +70,7 @@
 						<?php do_action( 'bbp_theme_before_topic_form_title' ); ?>
 
 						<p>
-							<label for="bbp_topic_title"><?php printf( __( 'Topic Title (Maximum Length: %d):', 'bbpress' ), bbp_get_title_max_length() ); ?></label>
+							<label for="bbp_topic_title"><?php printf( __( 'Topic Title (Maximum Length: %d)', 'bbpress' ), bbp_get_title_max_length() ); ?></label>
 							<input type="text" id="bbp_topic_title" value="<?php bbp_form_topic_title(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="40" name="bbp_topic_title" maxlength="<?php bbp_title_max_length(); ?>" />
 						</p>
 
@@ -79,7 +79,7 @@
 						<?php do_action( 'bbp_theme_before_topic_form_content' ); ?>
 
 						<p>
-							<label for="bbp_topic_content"><?php _e( 'Topic Description:', 'bbpress' ); ?></label>
+							<label for="bbp_topic_content"><?php _e( 'Topic Description', 'bbpress' ); ?> <span class="mardown-link">(Use <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> to format your post)</span></label>
 							<textarea id="bbp_topic_content" tabindex="<?php bbp_tab_index(); ?>" name="bbp_topic_content" cols="60" rows="6"><?php bbp_form_topic_content(); ?></textarea>
 						</p>
 
