@@ -8,7 +8,10 @@
 	
 	// If we're on a forum page
 	if ($is_forum) {
-		get_template_part('utility-topics');
+		if(is_user_logged_in()) {
+			get_template_part('utility-tools');
+			get_template_part('utility-topics');
+		}
 	}
 
 	// If the racing page or a child of it

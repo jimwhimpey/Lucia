@@ -647,7 +647,22 @@ table.results {
 	float: left;
 	margin-right: 10px;
 }
-		
+
+
+/******************************************************************************/
+/* FORUM TOOLS SIDEBAR */
+
+.tools p {
+	margin: 20px 0 10px 20px;
+	font-size: 15px;
+	font-weight: bold;
+	}
+	
+.tools ul li {
+	line-height: 1.4;
+	font-size: 15px;
+	}
+
 		
 /******************************************************************************/
 /* LATEST TOPIC SIDEBAR */
