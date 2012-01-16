@@ -541,6 +541,13 @@ table.results {
 			padding-bottom: 30px;
 			vertical-align: top;
 			}
+			
+			.forum .bbp-replies td.bbp-reply-content blockquote { margin-bottom: 15px; }
+			
+			.forum .bbp-replies td.bbp-reply-content cite {
+				font-size: 14px;
+				font-weight: bold;
+				}
 		
 		.forum .bbp-replies td.bbp-reply-author { width: 120px; }
 		
