@@ -24,5 +24,15 @@ $(function(){
 		return false;
 	
 	});
+	
+	// Handle the attachments form showing and hiding
+	$("h4.attachments-toggle a").click(function(){
+		if ($(".attachments-form:hidden").length > 0 ) {
+			$(".attachments-form").show();
+		} else {
+			$(".attachments-form").hide();
+		}	
+		return false;
+	});
 
 });

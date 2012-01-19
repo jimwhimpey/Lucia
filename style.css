@@ -619,6 +619,52 @@ table.results {
 				padding: 10px;
 				border: 1px inset #999;
 				}
+				
+				.forum .bbp-reply-form textarea { margin-bottom: 0; }
+				
+
+/******************************************************************************/
+/* ATTACHMENTS */
+
+.post h4.attachments-toggle {
+	font-weight: normal;
+	margin: 0 0 10px 0;
+	}
+
+.attachments-form {
+	display: none;
+	border: 1px solid #999;
+	background: #FFF;
+	padding: 10px;
+	margin: 0 0 10px 0;
+	}
+	
+	.attachments-form input { margin: 0 0 5px 0; }
+	
+.bbp-attachments {
+	border-top: 1px solid #DDD;
+	padding-top: 10px;
+	margin-top: 10px;
+	}
+	
+	.bbp-attachments h6 {
+		font-weight: bold;
+		font-size: 14px;
+		margin: 0 0 10px 0;
+		}
+		
+	.bbp-attachments ol {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		overflow: hidden;
+		}
+		
+		.bbp-attachments ol li {
+			float: left;
+			margin-right: 10px;
+			}
 
 
 /******************************************************************************/
