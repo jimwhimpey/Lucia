@@ -2,7 +2,7 @@
 	
 	// Determine if we're on a forum page
 	global $forum;
-	if ($post->post_type == 'forum' || $post->post_type == 'topic' || $post->post_type == 'reply' || $forum == true) {
+	if ($post->post_type == 'forum' || $post->post_type == 'topic' || $post->post_type == 'reply' || $forum == true || $post->ID == 306) {
 		$is_forum = true;
 	}
 	
