@@ -212,7 +212,7 @@ div.nav ul {
 			font-family: Georgia, Times, serif;
 			text-transform: uppercase;
 			letter-spacing: 0.2em;
-			margin: 20px 0 10px 0;
+			margin: 30px 0 10px 0;
 			color: #00204F;
 			border-top: 1px solid #DDD;
 			padding-top: 10px;
@@ -742,6 +742,16 @@ table.results {
 	}
 	
 .private-messages .action ul { margin-left: 20px; }
+
+
+/******************************************************************************/
+/* PAGE SHOWN WHEN VISITING THE FORUM LOGGED OUT */
+
+.forum-logged-out h3 { 
+	margin-top: 50px;
+	font-size: 18px;
+	font-weight: bold;
+}
 
 
 /******************************************************************************/
