@@ -495,12 +495,14 @@ table.results {
 		font-style: italic;
 		}
 
-	.forum table { width: 100%; }
+	.forum table,
+	.private-messages table { width: 100%; }
 	
 		.forum table tfoot { display: none; }
 	
 		.forum table th,
-		.forum .bbp-reply-header td {
+		.forum .bbp-reply-header td,
+		.private-messages th {
 			padding: 5px;
 			font-weight: bold;
 			background: #FFF;
@@ -514,7 +516,8 @@ table.results {
 				border-bottom: 1px solid #DDD;
 				}
 	
-		.forum table td {
+		.forum table td,
+		.private-messages table td {
 			padding: 10px 5px;
 			border-bottom: 1px solid #DDD;
 			}
@@ -589,7 +592,8 @@ table.results {
 		.forum .bbp-reply-form .bbp-template-notice { display: none; }
 		
 		.forum .bbp-topic-form label,
-		.forum .bbp-reply-form label {
+		.forum .bbp-reply-form label,
+		.private-messages label {
 			display: block;
 			margin: 0 0 5px 0;
 			font-size: 14px;
@@ -601,7 +605,10 @@ table.results {
 		.forum .bbp-topic-form input#bbp_topic_title,
 		.forum .bbp-topic-form textarea,
 		.forum .bbp-reply-form textarea,
-		#bbp-your-profile input {
+		#bbp-your-profile input,
+		.private-messages textarea,
+		.private-messages .subject,
+		.private-messages select {
 			width: 400px;
 			padding: 5px;
 			margin: 0 0 10px 0;
@@ -613,7 +620,8 @@ table.results {
 			.forum .bbp-reply-form label.notify-label { display: inline; }
 				
 			.forum .bbp-topic-form textarea,
-			.forum .bbp-reply-form textarea {
+			.forum .bbp-reply-form textarea,
+			.private-messages textarea {
 				width: 545px;
 				height: 160px;
 				padding: 10px;
@@ -698,6 +706,45 @@ table.results {
 
 
 /******************************************************************************/
+/* PRIVATE MESSAGES */
+
+.private-messages label { margin-bottom: 0; }
+
+.private-messages select,
+.private-messages input.subject {
+	width: 400px;
+	margin: 0 0 15px 0;
+}
+
+.private-messages select { width: 410px; }
+
+.private-messages .updated {
+	color: #467F27;
+	font-weight: bold;
+}
+
+.private-messages .error { color: #BE4040; }
+
+.private-messages table { margin-bottom: 15px; }
+
+.private-messages .tablenav select { width: 200px; }
+
+.private-messages .row-actions { 
+	font-size: 13px;
+	opacity: 0.5;
+	}
+	
+.private-messages td.date { font-size: 13px; }
+	
+.private-messages tr.unread td { 
+	background: #E9F4CB;
+	font-weight: bold;
+	}
+	
+.private-messages .action ul { margin-left: 20px; }
+
+
+/******************************************************************************/
 /* FORUM TOOLS SIDEBAR */
 
 .tools p {
@@ -710,6 +757,8 @@ table.results {
 	line-height: 1.4;
 	font-size: 15px;
 	}
+	
+	.tools ul li a span { color: #EC4340; }
 
 		
 /******************************************************************************/
