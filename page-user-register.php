@@ -7,6 +7,12 @@
  * @subpackage Theme
  */
 
+ 	// If the user isn't logged in, redirect them to the homepage
+ 	if (!is_user_logged_in()) {
+ 		header("Location: " . get_bloginfo('url') . "/forum/");
+ 		die();
+ 	}
+
 // No logged in users
 bbp_logged_in_redirect();
 

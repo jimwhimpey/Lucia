@@ -29,7 +29,7 @@
 					<p>Your username will always be first name followed by surname even if you've changed 
 						your display name.</p>
 						
-					<?php wp_login_form( $args ); ?> 
+					<?php wp_login_form(array('remember' => true)); ?> 
 					
 					
 					<h3>If This Is Your First Time Logging In...</h3>

@@ -753,6 +753,29 @@ table.results {
 	font-weight: bold;
 }
 
+.forum-logged-out form { margin-top: 30px; }
+
+.forum-logged-out label {
+	font-size: 16px;
+	display: block;
+}
+
+.forum-logged-out input#user_login,
+.forum-logged-out input#user_pass {
+	width: 300px;
+	padding: 5px;
+	margin: 0 0 6px 0;
+	font-size: 16px;
+	font-family: Menlo, Monaco, Consolas, Courier, monospace;
+	background: #FFF;
+}
+
+.forum-logged-out input#wp-submit {
+	width: 100px;
+	padding: 10px 0;
+	font-size: 20px;
+}
+
 
 /******************************************************************************/
 /* FORUM TOOLS SIDEBAR */

@@ -24,7 +24,7 @@
 		<div class="nav">
 			<ul class="primary">
 				<?php wp_list_pages(array('title_li' => '', 'depth'  => '1', 'exclude' => '306')); ?> 
-				<li class="page_item page-item-34 <?php if ($post->post_type == 'forum' || $post->post_type == 'topic' || $post->ID == 306) { echo "current_page_item"; } ?>"><a href="<?php bloginfo('url'); ?>/forum/">Forum</a></li>
+				<li class="page_item page-item-34 <?php if ($post->post_type == 'forum' || $post->post_type == 'topic' || $post->ID == 306 || $post->ID == 289) { echo "current_page_item"; } ?>"><a href="<?php bloginfo('url'); ?>/forum/">Forum</a></li>
 			</ul>
 			<?php
 			

@@ -9,6 +9,14 @@
 
 ?>
 
+<?php
+	// If the user isn't logged in, redirect them to the homepage
+	if (!is_user_logged_in()) {
+		header("Location: " . get_bloginfo('url') . "/forum/");
+		die();
+	}
+?>
+
 <?php get_header(); ?>
 
 		<div class="main">
