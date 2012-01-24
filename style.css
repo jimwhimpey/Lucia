@@ -88,7 +88,8 @@ div.nav ul {
 		}
 		
 		div.nav ul li.page-item-11,
-		div.nav ul li.page-item-34 { float: right; }
+		div.nav ul li.page-item-34,
+		div.nav ul li.page-item-311 { float: right; }
 		
 		div.nav ul li a {
 			height: 26px;

@@ -23,8 +23,11 @@
 		</h1>
 		<div class="nav">
 			<ul class="primary">
-				<?php wp_list_pages(array('title_li' => '', 'depth'  => '1', 'exclude' => '306')); ?> 
+				<?php wp_list_pages(array('title_li' => '', 'depth'  => '1', 'exclude' => '306,311')); ?> 
 				<li class="page_item page-item-34 <?php if ($post->post_type == 'forum' || $post->post_type == 'topic' || $post->ID == 306 || $post->ID == 289) { echo "current_page_item"; } ?>"><a href="<?php bloginfo('url'); ?>/forum/">Forum</a></li>
+				<?php if(is_user_logged_in()) { ?>
+					<li class="page_item page-item-311 <?php if ($post->ID == 311) { echo "current_page_item"; } ?>"><a href="<?php bloginfo('url'); ?>/documents/">Documents</a></li>
+				<?php } ?>
 			</ul>
 			<?php
 			
