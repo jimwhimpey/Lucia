@@ -39,8 +39,7 @@ html { background: url(images/noise.png); }
 			overflow: hidden;
 			}
 		
-		a,
-		a:visited { color: blue; text-decoration: none; }
+		a, a:visited { color: blue; text-decoration: none; }
 		
 			a:hover { border-bottom: 1px solid blue; }
 			
@@ -115,12 +114,11 @@ div.nav ul {
 /* HOMEPAGE BLURB */
 
 .blurb p {
-	margin: 30px 30px 10px 30px;
+	margin: 40px 30px 20px 30px;
 	text-align: center;
 	text-shadow: #FFF 0 2px 0;
 	font-family: Georgia, Times, serif;
 	font-size: 24px;
-	font-style: italic;
 	line-height: 1.6em;
 	}
 
@@ -160,12 +158,14 @@ div.nav ul {
 	line-height: 1.6em;
 	}
 	
-	.post h3 {
+	.single .post { border-bottom: none; }
+	
+	.entry-content h3 {
 		font-size: 20px;
 		margin: 0 0 10px 0;
 		}
 		
-	.post h4 { font-weight: bold; }
+	.entry-content h4 { font-weight: bold; }
 		
 	.single h3 {
 		font-size: 30px;
@@ -175,10 +175,10 @@ div.nav ul {
 		opacity: 0.8;
 		}
 			
-	.post p,
-	.post ul,
-	.post ol,
-	.post blockquote,
+	.entry-content p,
+	.entry-content ul,
+	.entry-content ol,
+	.entry-content blockquote,
 	.comment-content p,
 	.comment-content ul,
 	.comment-content ol,
@@ -188,7 +188,7 @@ div.nav ul {
 		line-height:  1.5em;
 		}
 		
-		.post blockquote {
+		.entry-content blockquote {
 			border-left: 5px solid #00204F;
 			margin-left: 20px;
 			padding-left: 20px;
@@ -196,15 +196,15 @@ div.nav ul {
 			font-style: italic;
 			}
 		
-		.post ul,
-		.post ol,
+		.entry-content ul,
+		.entry-content ol,
 		.comment-content ul,
 		.comment-content ol { margin-left: 35px; }
 		
-			.post ul,
+			.entry-content ul,
 			.comment-content ul { list-style: square; }
 			
-			.post ol,
+			.entry-content ol,
 			.comment-content ol { list-style: decimal; }
 		
 		.entry-content h3,
@@ -294,17 +294,12 @@ div.nav ul {
 /******************************************************************************/
 /* PAGES */
 
-.type-page .entry-content { padding: 0 30px; }
+.page .entry-content { padding: 0 30px; }
 
 .page {
 	margin: 30px 0 0 0;
 	border-bottom: none;
 	}
-	
-	.page p,
-	.page ul,
-	.page ol,
-	.page blockquote { font-size: 16px; }
 
 
 /******************************************************************************/
@@ -315,7 +310,10 @@ div.nav ul {
 	width: 610px;
 	overflow: hidden;
 	font-size: 18px;
+	line-height: 1.5em;
 	}
+	
+	.post-nav div { width: 250px; }
 	
 	.post-nav .older { float: left; }
 	
@@ -349,7 +347,7 @@ div.nav ul {
 
 
 /******************************************************************************/
-/* EVENTS */
+/* SIDEBAR — EVENTS */
 
 .events table { 
 	margin: 0 20px 15px 20px;
@@ -383,7 +381,7 @@ div.nav ul {
 
 
 /******************************************************************************/
-/* SPONSORS */
+/* SIDEBAR — SPONSORS */
 
 .sponsors img { margin: 0 20px 20px 20px; }
 
@@ -461,13 +459,13 @@ table.results {
 /******************************************************************************/
 /* FORUM */
 
-.forum .bbp-forums { margin-top: 30px; }
+/* FORUM HOME PAGE */
+
+.forum table.bbp-forums { margin-top: 30px; }
 
 	.forum ul.bbp-forums { margin-top: 10px; }
 	
 		.forum ul.bbp-forums li { margin-bottom: 10px; }
-
-.forum .entry-content { margin: 0 30px; }
 
 	.forum h2 { margin-bottom: 5px; }
 
@@ -476,17 +474,18 @@ table.results {
 	.forum p.bbp-forum-description,
 	.forum p.bbp-topic-description { display: none; }
 
+/* INDIVIDUAL FORUM PAGES */
+
 	.forum div.bbp-breadcrumb {
 		margin: 0 30px 30px 30px;
-		font-style: italic
+		font-style: italic;
+		font-size: 14px;
 		}
 		
 		.forum div.bbp-breadcrumb span.bbp-breadcrumb-current {
 			font-weight: bold;
 			font-style: normal;
 			}
-		
-		.forum div.bbp-breadcrumb p { font-size: 14px; }
 
 	.forum .no-content {
 		border-top: 1px solid #DDD;
@@ -533,7 +532,9 @@ table.results {
 			.forum table .bbp-topic-freshness { text-align: right; }
 			
 			.forum table td ul { margin-bottom: 0; }
-	
+
+/* INDIVIDUAL TOPIC PAGES */
+
 	.forum .bbp-replies { margin: 0 0 10px 0; }
 	
 		.forum .bbp-replies a.bbp-author-avatar { display: block; }
@@ -570,7 +571,9 @@ table.results {
 		opacity: 0.4;
 		font-size: 14px;
 		}
-	
+
+/* NEW TOPIC AND REPLY FORMS */
+
 	.forum .bbp-topic-form,
 	.forum .bbp-reply-form { 
 		margin-top: 40px;
@@ -630,7 +633,40 @@ table.results {
 				}
 				
 				.forum .bbp-reply-form textarea { margin-bottom: 0; }
-				
+
+
+/******************************************************************************/
+/* PAGE SHOWN WHEN VISITING THE FORUM LOGGED OUT */
+
+.forum-logged-out h3 { 
+	margin-top: 50px;
+	font-size: 18px;
+	font-weight: bold;
+	}
+
+.forum-logged-out form { margin-top: 30px; }
+
+.forum-logged-out label {
+	font-size: 16px;
+	display: block;
+	}
+
+.forum-logged-out input#user_login,
+.forum-logged-out input#user_pass {
+	width: 300px;
+	padding: 5px;
+	margin: 0 0 6px 0;
+	font-size: 16px;
+	font-family: Menlo, Monaco, Consolas, Courier, monospace;
+	background: #FFF;
+	}
+
+.forum-logged-out input#wp-submit {
+	width: 100px;
+	padding: 10px 0;
+	font-size: 20px;
+	}
+
 
 /******************************************************************************/
 /* ATTACHMENTS */
@@ -746,39 +782,6 @@ table.results {
 
 
 /******************************************************************************/
-/* PAGE SHOWN WHEN VISITING THE FORUM LOGGED OUT */
-
-.forum-logged-out h3 { 
-	margin-top: 50px;
-	font-size: 18px;
-	font-weight: bold;
-}
-
-.forum-logged-out form { margin-top: 30px; }
-
-.forum-logged-out label {
-	font-size: 16px;
-	display: block;
-}
-
-.forum-logged-out input#user_login,
-.forum-logged-out input#user_pass {
-	width: 300px;
-	padding: 5px;
-	margin: 0 0 6px 0;
-	font-size: 16px;
-	font-family: Menlo, Monaco, Consolas, Courier, monospace;
-	background: #FFF;
-}
-
-.forum-logged-out input#wp-submit {
-	width: 100px;
-	padding: 10px 0;
-	font-size: 20px;
-}
-
-
-/******************************************************************************/
 /* FORUM TOOLS SIDEBAR */
 
 .tools p {
@@ -877,21 +880,3 @@ table.results {
 	}
 	
 	.footer a { color: #6585FF; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

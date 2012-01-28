@@ -30,8 +30,8 @@
 				<?php comments_template( '', true ); ?>
 
 				<div class="post-nav">
-					<div class="older"><?php previous_post_link('%link', __('<span>&larr;</span> Previous post')); ?></div>
-					<div class="newer"><?php next_post_link('%link', __( 'Next post <span>&rarr;</span>')); ?></div>
+					<div class="older"><?php previous_post_link('%link','<span>&larr;</span> Previous post: %title'); ?></div>
+					<div class="newer"><?php next_post_link('%link','Next post: %title <span>&rarr;</span>'); ?></div>
 				</div>
 
 			<?php endwhile;  ?>
