@@ -172,6 +172,15 @@ div.nav {
 .events .more { margin: 0 20pt 30pt 20pt; }
 
 
+/******************************************************************************/
+/* PAGES */
+
+.page .entry-content { padding: 0 15pt; }
+
+.page {
+	margin: 0;
+	border-bottom: none;
+	}
 
 
 
