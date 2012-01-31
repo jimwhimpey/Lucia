@@ -1,0 +1,181 @@
+/****************************************************************************************/
+/* MOBILE modifications on top of the default stylesheet, pretty barebones really */
+
+body,
+.main,
+div.nav ul,
+.col-a,
+.col-b { 
+	width: 100%;
+	float: none;
+}
+
+#mobile-header img { 
+	display: block;
+	width: 320pt;
+	height: 75pt;
+}
+
+h1,
+.blurb,
+.flickr,
+.sponsors { display: none; }
+
+
+/****************************************************************************************/
+/* MOBILE NAV */
+
+a.mobile-menu-toggle {
+	display: block;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 14pt;
+	text-transform: uppercase;
+	border-bottom: none;
+	}
+
+	a.mobile-menu-toggle:hover { border-bottom: none; }
+
+div.nav { 
+	width: 320pt;
+	overflow: hidden;
+	background: #00204F;
+	position: relative;
+	}
+
+	div.nav ul {
+		display: none;
+		width: 320pt;
+		height: 100%;
+		padding: 0 0 5pt 0;
+		background: #00204F;
+		font-family: Helvetica, sans-serif;
+		font-weight: bold;
+		font-size: 14pt;
+		text-transform: uppercase;
+		position: relative;
+		float: left;
+		}
+	
+		div.nav ul li,
+		div.nav ul li.page-item-11,
+		div.nav ul li.page-item-34,
+		div.nav ul li.page-item-311 {
+			height: auto;
+			float: none;
+			}
+		
+			div.nav ul li a,
+			.mobile-menu-toggle {
+				height: auto;
+				display: block;
+				color: #ABD4F0;
+				padding: 10pt 16px;
+				cursor: pointer;
+				}
+			
+			div.nav ul li.current_page_item,
+			div.nav ul li.current_page_ancestor { background: #193660; }
+	
+		div.nav ul.secondary {
+			width: 160pt;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background: #193660;
+			}
+
+
+/****************************************************************************************/
+/* BLOGS and POSTS */
+
+.content h2,
+.col-b h2 {
+	font-size: 28px;
+	font-family: Homestead, Helvetica, sans-serif;
+	margin: 0 0 20pt 15pt;
+	}
+
+.col-a, .col-b {
+	margin: 0;
+	padding: 20pt 0;
+}
+
+
+.post {
+	margin: 0 15pt 20pt 15pt;
+	}
+
+
+/******************************************************************************/
+/* POST NAV */
+
+.post-nav {
+	padding: 40pt 20pt 10pt 20pt;
+	width: 280pt;
+	}
+	
+	.post-nav div { width: 130pt; }
+
+
+/******************************************************************************/
+/* COMMENTS */
+			
+#comments input#email,
+#comments input#author,
+#comments input#url,
+#comments textarea {
+	width: 230pt;
+	padding: 5px;
+	margin: 0 0 10px 0;
+	font-size: 16px;
+	font-family: Menlo, Monaco, Consolas, Courier, monospace;
+	}
+				
+#comments textarea {
+	width: 230pt;
+	height: 160pt;
+	padding: 10px;
+	border: 1px inset #999;
+	}
+
+	ol.commentlist {
+		border-bottom: 1px solid #ABD4F0;
+		padding: 0 0 20px 0;
+		margin: 0 0 30px 0;
+		}
+		
+		ol.commentlist li {
+			background:  #FFF;
+			padding: 20px;
+			margin-bottom: 10px;
+			}
+	
+	.logged-in-as { margin: 10px 0 20px 0; }
+
+
+/******************************************************************************/
+/* SIDEBAR — EVENTS */
+
+.events table { 
+	margin: 0 20pt 10pt 20pt;
+	width: 280pt;	
+	border-top: 1px solid #ABD4F0;
+	}
+			
+	.events table td.summary { 
+		width: 200pt;
+		padding-right: 10pt;	
+		}
+
+.events .more { margin: 0 20pt 30pt 20pt; }
+
+
+
+
+
+
+
+
+

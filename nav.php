@@ -1,5 +1,7 @@
 <div class="nav">
 	
+	<a class="mobile-menu-toggle">Menu</a>
+	
 	<ul class="primary">
 		
 		<?php wp_list_pages(array('title_li' => '', 'depth'  => '1', 'exclude' => '306,311')); ?> 

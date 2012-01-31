@@ -91,7 +91,7 @@ div.nav ul {
 		div.nav ul li.page-item-311 { float: right; }
 		
 		div.nav ul li a {
-			height: 26px;
+			height: 30px;
 			display: block;
 			color: #ABD4F0;
 			padding: 14px 16px 0 16px;
@@ -160,7 +160,7 @@ div.nav ul {
 	
 	.single .post { border-bottom: none; }
 	
-	.entry-content h3 {
+	.blog h3 {
 		font-size: 20px;
 		margin: 0 0 10px 0;
 		}
@@ -880,3 +880,17 @@ table.results {
 	}
 	
 	.footer a { color: #6585FF; }
+	
+	
+/******************************************************************************/
+/* HIDING MOBILE STUFF */
+
+#mobile-header img,
+.mobile-menu-toggle { display: none; }
+	
+	
+	
+	
+	
+	
+	

@@ -34,5 +34,14 @@ $(function(){
 		}	
 		return false;
 	});
+	
+	// Mobile menu toggle
+	$(".mobile-menu-toggle").click(function(){
+		if ($(".nav ul:hidden").length > 0) {
+			$(".nav ul").show();
+		} else {
+			$(".nav ul").hide();
+		}
+	});
 
 });
