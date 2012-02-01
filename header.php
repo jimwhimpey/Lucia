@@ -12,7 +12,7 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width; initial-scale=0.75; user-scalable=no;" />
 		
-		<title><?php get_template_part('utility-title'); ?></title>
+		<title><?php get_template_part('utilities/title'); ?></title>
 		
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style-mobile.css" media="handheld, only screen and (max-device-width:640px)" />

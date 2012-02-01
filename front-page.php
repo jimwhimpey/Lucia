@@ -61,6 +61,6 @@
 
 	</div>
 	
-	<?php get_template_part('utility-flickr'); ?>
+	<?php get_template_part('utilities/flickr'); ?>
 
 <?php get_footer(); ?>

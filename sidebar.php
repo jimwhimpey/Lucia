@@ -9,21 +9,21 @@
 	// If we're on a forum page
 	if ($is_forum) {
 		if(is_user_logged_in()) {
-			get_template_part('utility-tools');
-			get_template_part('utility-topics');
+			get_template_part('sidebar/utility', 'tools');
+			get_template_part('sidebar/utility', 'topics');
 		}
 	}
 
 	// If the racing page or a child of it
 	if (is_page('racing') || $post->post_parent == 17) {
-		get_template_part('utility-results');
+		get_template_part('sidebar/utility', 'results');
 	}
 	
 	// If is the contact page or the racing page or a child of the racing page or the calendar page, not forum
 	if (!is_page('contact') && !is_page('racing') && $post->post_parent != 17 && !is_page('calendar') && !$is_forum) {
-		get_template_part('utility-calendar');
+		get_template_part('sidebar/utility', 'calendar');
 	}
 
-	get_template_part('utility-sponsors');
+	get_template_part('sidebar/utility', 'sponsors');
 	
 ?>
