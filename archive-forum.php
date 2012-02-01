@@ -13,7 +13,12 @@
 
 	<div class="main">
 		
-		<div class="page post forum col-a content">
+		<?php 
+			$forum = true;
+			get_sidebar();
+		?>
+		
+		<div class="page post forum forum-front col-a content">
 			
 			<?php if (!is_user_logged_in()) { // Not logged in ?>
 				
@@ -67,11 +72,6 @@
 			<?php } ?>
 		
 		</div>
-		
-		<?php 
-			$forum = true;
-			get_sidebar();
-		?>
 	
 	</div>
 	

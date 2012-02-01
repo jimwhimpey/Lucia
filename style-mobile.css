@@ -8,6 +8,7 @@ div.nav ul,
 .col-b { 
 	width: 100%;
 	float: none;
+	clear: both;
 }
 
 #mobile-header img { 
@@ -182,9 +183,31 @@ div.nav {
 	border-bottom: none;
 	}
 
+iframe { width: 280pt; }
 
 
+/******************************************************************************/
+/* FORUM FORMS */
+			
+	.forum .bbp-topic-form input#bbp_topic_title,
+	.forum .bbp-topic-form textarea,
+	.forum .bbp-reply-form textarea,
+	#bbp-your-profile input,
+	.private-messages textarea,
+	.private-messages .subject,
+	.private-messages select {
+		width: 280pt;
+		}
+		
+		.forum .bbp-topic-form input#bbp_topic_title { width: 250pt; }
 
-
-
-
+			.forum .bbp-topic-form label.notify-label,
+			.forum .bbp-reply-form label.notify-label { display: inline; }
+				
+			.forum .bbp-topic-form textarea,
+			.forum .bbp-reply-form textarea,
+			.private-messages textarea {
+				width: 240pt;
+				height: 160pt;
+				padding: 10pt;
+				}

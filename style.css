@@ -134,6 +134,8 @@ div.nav ul {
 	background: rgba(255,255,255,0.7);
 	}
 
+	.forum-front { float: none; } /* So sidebar appears before the content on mobile */
+	
 .content { padding: 0 0 30px 0; }
 	
 	.content h2,
@@ -469,7 +471,7 @@ table.results {
 
 	.forum h2 { margin-bottom: 5px; }
 
-		.forum #forum-front h2 { margin-top: 30px; }
+		.forum #forum-front h2 { padding-top: 30px; }
 
 	.forum p.bbp-forum-description,
 	.forum p.bbp-topic-description { display: none; }
@@ -532,6 +534,8 @@ table.results {
 			.forum table .bbp-topic-freshness { text-align: right; }
 			
 			.forum table td ul { margin-bottom: 0; }
+			
+			.bbp-topic-freshness-author .bbp-author-avatar { display: none; }
 
 /* INDIVIDUAL TOPIC PAGES */
 

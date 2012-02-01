@@ -49,7 +49,7 @@
 
 				<?php do_action( 'bbp_theme_before_topic_author' ); ?>
 
-				<span class="bbp-topic-freshness-author"><?php // bbp_author_link( array( 'post_id' => bbp_get_forum_last_active_id(), 'size' => 14 ) ); ?></span>
+				<span class="bbp-topic-freshness-author"><?php // bbp_author_link( array( 'post_id' => bbp_get_forum_last_active_id(), 'size' => 1 ) ); ?></span>
 
 				<?php do_action( 'bbp_theme_after_topic_author' ); ?>
 

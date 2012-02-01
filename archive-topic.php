@@ -35,8 +35,11 @@
 			</div>
 		
 		</div>
-
-		<?php get_sidebar(); ?>
+		
+		<?php 
+			$forum = true;
+			get_sidebar();
+		?>
 		
 	</div>
 		
