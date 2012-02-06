@@ -9,7 +9,7 @@
 
 ?>
 
-<form id="bbp-your-profile" action="<?php bbp_user_profile_edit_url( bbp_get_displayed_user_id() ); ?>" method="post">
+<form id="bbp-your-profile" action="<?php bbp_user_profile_edit_url( bbp_get_displayed_user_id() ); ?>" method="post" enctype="multipart/form-data">
 
 	<h3 class="entry-title"><?php _e( 'Name', 'bbpress' ) ?></h3>
 
@@ -45,11 +45,15 @@
 
 	</fieldset>
 
-	<h3 class="entry-title">Avatars</h3>
+	<h3 class="entry-title">Avatar</h3>
 	
-	<p class="avatar-par"><?php echo get_avatar(bbp_get_displayed_user_id(), 80); ?>			
-		Avatars are taken from <a href="http://en.gravatar.com/">Gravatar</a> (globally recognised avatar). Register your email 
-		registered on the forum (<?php echo bbp_get_displayed_user_field( 'user_email' ); ?>) to have your avatar appear on the forum.</p>
+	<p class="avatar-par"><?php echo get_avatar(bbp_get_displayed_user_id(), 80, get_bloginfo('url') . "/avatars/default.png"); ?>			
+		Upload your avatar here. Your image will be cropped to a square. Supported image types are gif, jpg and png.<br />
+	</p>
+	
+	<p><input type="file" name="avatar_file" id="avatar_file" /></p>
+		
+		
 	
 
 	<h3 class="entry-title"><?php _e( 'Contact Info', 'bbpress' ) ?></h3>
