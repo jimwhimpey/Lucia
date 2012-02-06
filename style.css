@@ -745,6 +745,13 @@ table.results {
 	margin-right: 10px;
 }
 
+.updated {
+	color: #447F27;
+	font-weight: bold;
+	padding: 10px 0;
+	margin: 20px 0 0 0;
+}
+
 
 /******************************************************************************/
 /* PRIVATE MESSAGES */
