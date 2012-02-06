@@ -87,10 +87,10 @@
 
 						<?php if ( !current_user_can( 'unfiltered_html' ) ) : ?>
 
-							<p class="form-allowed-tags">
+							<!--<p class="form-allowed-tags">
 								<label><?php _e( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:','bbpress' ); ?></label>
 								<code><?php bbp_allowed_tags(); ?></code>
-							</p>
+							</p>-->
 
 						<?php endif; ?>
 
