@@ -31,7 +31,10 @@
 			$parent = $post->ID;
 		}
 				
-		$children = wp_list_pages(array('title_li' => '', 'child_of'  => $parent, 'echo'  => '0', 'depth' => '1'));
+		if (isset($parent)) {
+			$children = wp_list_pages(array('title_li' => '', 'child_of'  => $parent, 'echo'  => '0', 'depth' => '1'));
+		}
+		
 				
 		// If there's subnav, show it
 		if ($children) { ?>
