@@ -1,0 +1,11 @@
+/******************************************************************************/
+/* FIXING THE PIECE OF SHIT */
+
+div.nav ul li,
+div.nav ul li a,
+div.nav ul li a:visited {
+	display: inline;
+	line-height: 3.5em;
+	height: auto;
+}
+

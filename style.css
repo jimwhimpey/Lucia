@@ -90,7 +90,8 @@ div.nav ul {
 		div.nav ul li.page-item-34,
 		div.nav ul li.page-item-311 { float: right; }
 		
-		div.nav ul li a {
+		div.nav ul li a,
+		div.nav ul li a:visited {
 			height: 30px;
 			display: block;
 			color: #ABD4F0;

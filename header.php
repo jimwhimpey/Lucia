@@ -16,6 +16,9 @@
 		
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style-mobile.css" media="handheld, only screen and (max-device-width:640px)" />
+		<!--[if IE 6]>
+			<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style-ie6.css" media="screen" />
+		<![endif]-->
 
 		<script type="text/javascript" charset="utf-8" src="<?php bloginfo('template_directory'); ?>/scripts/jquery.min.js"></script>
 		<script type="text/javascript" charset="utf-8" src="<?php bloginfo('template_directory'); ?>/scripts/spin.min.js"></script>
