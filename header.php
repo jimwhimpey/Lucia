@@ -14,6 +14,8 @@
 		
 		<title><?php get_template_part('utilities/title'); ?></title>
 		
+		<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/favicon.png" />
+		
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style-mobile.css" media="handheld, only screen and (max-device-width:640px)" />
 		<!--[if IE 6]>
