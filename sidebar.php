@@ -24,6 +24,12 @@
 		get_template_part('sidebar/utility', 'calendar');
 	}
 
+	// Strava link, just on homepage
+	if (is_front_page()) {
+		get_template_part('sidebar/utility', 'strava');
+	}
+
+	// All Pages
 	get_template_part('sidebar/utility', 'sponsors');
 	
 ?>
