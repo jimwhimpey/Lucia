@@ -23,7 +23,7 @@
 		<?php // bbp_user_subscribe_link(array('before' => '')); ?>		
 
 		<?php if ( bbp_show_lead_topic() ) : ?>
-
+			
 			<?php bbp_get_template_part( 'bbpress/content', 'single-topic-lead' ); ?>
 
 		<?php endif; ?>
@@ -31,7 +31,7 @@
 		<?php if ( bbp_get_query_name() || bbp_has_replies() ) : ?>
 
 			<?php // bbp_get_template_part( 'bbpress/pagination', 'replies' ); ?>
-
+			
 			<?php bbp_get_template_part( 'bbpress/loop',       'replies' ); ?>
 
 			<?php bbp_get_template_part( 'bbpress/pagination', 'replies' ); ?>

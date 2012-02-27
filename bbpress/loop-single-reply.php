@@ -17,10 +17,24 @@
 			<?php do_action( 'bbp_theme_before_reply_admin_links' ); ?>
 			
 			<span class="bbp-admin-links">
-				&nbsp;| <a class="quotes_link" href="javascript:void(null)" title="<?php bbp_reply_author(); ?>">Quote</a>
+				<?php 
+					if (bbp_is_topic(bbp_get_reply_id())) {
+						if (current_user_can('edit_user')) {
+							bbp_user_subscribe_link();
+						} else {
+							bbp_user_subscribe_link(array("before" => ""));
+						}
+					}
+			 	?>
+				<?php
+					if (current_user_can('edit_user') || bbp_is_topic(bbp_get_reply_id())) {
+						echo "| ";
+					}
+				?>
+				<a class="quotes_link" href="javascript:void(null)" title="<?php bbp_reply_author(); ?>">Quote</a>
 			</span>
 
-			<?php bbp_reply_admin_links(); ?>
+			<?php bbp_reply_admin_links(array("after" => "&nbsp;")); ?>
 
 			<?php do_action( 'bbp_theme_after_reply_admin_links' ); ?>
 
