@@ -1,11 +1,13 @@
 <?php
 	
+	
+	
 	// Some extremely basic caching for two hours
-	if (file_exists('/web/cache/utility-calendar.html') && time() - filemtime('/web/cache/utility-calendar.html') < (60*60*2)) {
+	if (file_exists('/var/www/uqcycle/web/cache/utility-calendar.html') && time() - filemtime('/var/www/uqcycle/web/cache/utility-calendar.html') < (60*60*2)) {
  
 	  // the output is already cached, so just
 	  // dump the file's contents to the browser
-	  readfile('/web/cache/utility-calendar.html');
+	  readfile('/var/www/uqcycle/web/cache/utility-calendar.html');
  
 	} else {
  
@@ -13,7 +15,7 @@
     ob_start();
  
 ?>
-				
+
 		<div class="col-b events">
 			<h2>Upcoming Events</h2>
 			<table>
@@ -68,7 +70,7 @@
 
 	  // now, write the output you captured in the buffer
 	  // into the cache file
-	  $fp = fopen('/web/cache/utility-calendar.html', 'w');
+	  $fp = fopen('/var/www/uqcycle/web/cache/utility-calendar.html', 'w');
 	  fwrite($fp, ob_get_contents());
 	  fclose($fp);
  
