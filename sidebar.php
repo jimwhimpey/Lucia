@@ -21,7 +21,8 @@
 	
 	// If is the contact page or the racing page or a child of the racing page or the calendar page, not forum
 	if (!is_page('contact') && !is_page('racing') && $post->post_parent != 17 && !is_page('calendar') && !$is_forum) {
-		get_template_part('sidebar/utility', 'calendar');
+		// get_template_part('sidebar/utility', 'calendar');
+		require("wp-content/themes/lucia/sidebar/utility-calendar.php");
 	}
 
 	// Strava link, just on homepage
