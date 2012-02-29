@@ -3,21 +3,34 @@
 
 	<?php
 	
-		// Get the latest topics
-		$topics = new WP_Query(array('posts_per_page' => 10, 'post_type' => array('topic', 'reply')));
-
+		// Get the latest topics, ordered by the last reply date
+		$topics = new WP_Query(array('posts_per_page' => 10, 'post_type' => array('topic'), 'meta_key' => '_bbp_last_active_time', 'orderby' => 'meta_value', 'order' => 'DESC'));
+		
 		echo "<ul>";
+		
 		// Loop through and list them
-		while ( $topics->have_posts() ) : $topics->the_post();
+		while ( $topics->have_posts() ): $topics->the_post();
+		
+			$topicPermalink = get_permalink();
+			$topicTitle = get_the_title();
+		
+			// Get the last response
+			$responses = new WP_Query(array('posts_per_page' => 1, 'post_type' => array('reply'), 'orderby' => 'date', 'order' => 'DESC', 'post_parent' => get_the_ID()));
+			while ( $responses->have_posts() ) : $responses->the_post();
+				$lastResponseAuthor = get_the_author();
+				$lastResponseID = get_the_ID();
+				$lastResponseTime = human_time_diff( get_the_time('U'), current_time('timestamp') );
+			endwhile;
+			
+			// rewind_posts();
+		
 			// Get the URL pointing to the post
-			if ($post->post_type == "reply") {
-				echo "<li><a href='" . get_permalink($post->post_parent) . "#post-" . get_the_ID() . "'>" . get_the_title() . "</a> ";
-			} else {
-				echo "<li><a href='" . get_permalink() . "'>" . get_the_title() . "</a> ";
-			}
-			echo "<span>" . human_time_diff( get_the_time('U'), current_time('timestamp') ) . " ago by <span>" . get_the_author() . "</span></span>";
+			echo "<li><a href='" . $topicPermalink . "#post-" . $lastResponseID . "'>" . $topicTitle  . "</a> ";
+			echo "<span>Last reply " . $lastResponseTime . " ago by <span>" . $lastResponseAuthor . "</span></span>";
 			echo "</li>";
+			
 		endwhile;
+		
 		echo "</ul>";
 		
 		// Reset Post Data
