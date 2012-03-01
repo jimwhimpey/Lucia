@@ -13,20 +13,28 @@
 		
 			$topicPermalink = get_permalink();
 			$topicTitle = get_the_title();
+			$topicAuthor = get_the_author();
+			$topicTime = human_time_diff( get_the_time('U'), current_time('timestamp') );
+		
+			// Default of no responses
+			$response = false;
 		
 			// Get the last response
 			$responses = new WP_Query(array('posts_per_page' => 1, 'post_type' => array('reply'), 'orderby' => 'date', 'order' => 'DESC', 'post_parent' => get_the_ID()));
 			while ( $responses->have_posts() ) : $responses->the_post();
+				$response = true;
 				$lastResponseAuthor = get_the_author();
 				$lastResponseID = get_the_ID();
 				$lastResponseTime = human_time_diff( get_the_time('U'), current_time('timestamp') );
 			endwhile;
-			
-			// rewind_posts();
 		
 			// Get the URL pointing to the post
 			echo "<li><a href='" . $topicPermalink . "#post-" . $lastResponseID . "'>" . $topicTitle  . "</a> ";
-			echo "<span>Last reply " . $lastResponseTime . " ago by <span>" . $lastResponseAuthor . "</span></span>";
+			if ($response) {
+				echo "<span>Last reply " . $lastResponseTime . " ago by <span>" . $lastResponseAuthor . "</span></span>";
+			} else {
+				echo "<span>" . $topicTime . " ago by <span>" . $topicAuthor . "</span></span>";
+			}
 			echo "</li>";
 			
 		endwhile;
@@ -39,3 +47,7 @@
 	?>
 
 </div>
+
+<?php
+
+?>
