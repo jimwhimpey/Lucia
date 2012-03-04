@@ -7,7 +7,7 @@ $(function(){
 	
 		// Get the HTML body of what we want to quote
 		var author = $(this).parents(".bbp-reply-header").next(".type-reply, .type-topic").find(".bbp-author-name").text();
-		var quoteContent = $(this).parents(".bbp-reply-header").next(".type-reply, .type-topic").find(".bbp-reply-content").html().trim();
+		var quoteContent = $(this).parents(".bbp-reply-header").next(".type-reply, .type-topic").find(".bbp-reply-content .content").html().trim();
 		// Filter out the empty pars
 		quoteContent = quoteContent.replace(/<p><\/p>|\n/gi, "");
 		// Put it all together
