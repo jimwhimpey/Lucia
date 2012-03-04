@@ -554,6 +554,11 @@ table.results {
 			vertical-align: top;
 			}
 			
+			.forum .bbp-replies td.bbp-reply-content div.content {
+				width: 353pt;
+				overflow: hidden;
+			}
+			
 			.forum .bbp-replies td.bbp-reply-content blockquote { margin-bottom: 15px; }
 			
 			.forum .bbp-replies td.bbp-reply-content cite {

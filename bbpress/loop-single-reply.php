@@ -66,8 +66,9 @@
 		<td class="bbp-reply-content">
 
 			<?php do_action( 'bbp_theme_after_reply_content' ); ?>
-
-			<?php echo Markdown(bbp_get_reply_content()); ?>
+			<div class="content">
+				<?php echo Markdown(bbp_get_reply_content()); ?>
+			</div>
 
 			<?php do_action( 'bbp_theme_before_reply_content' ); ?>
 
