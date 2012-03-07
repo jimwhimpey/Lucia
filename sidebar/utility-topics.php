@@ -18,8 +18,10 @@
 		
 			// Default of no responses
 			$response = false;
-		
-			// Get the last response
+			
+			// For counting the number of pages
+			$responses_count = new WP_Query(array('posts_per_page' => 100, 'post_type' => array('reply'), 'orderby' => 'date', 'order' => 'DESC', 'post_parent' => get_the_ID()));			
+			
 			$responses = new WP_Query(array('posts_per_page' => 1, 'post_type' => array('reply'), 'orderby' => 'date', 'order' => 'DESC', 'post_parent' => get_the_ID()));
 			while ( $responses->have_posts() ) : $responses->the_post();
 				$response = true;
@@ -27,9 +29,15 @@
 				$lastResponseID = get_the_ID();
 				$lastResponseTime = human_time_diff( get_the_time('U'), current_time('timestamp') );
 			endwhile;
+			
+			
 		
-			// Get the URL pointing to the post
-			echo "<li><a href='" . $topicPermalink . "#post-" . $lastResponseID . "'>" . $topicTitle  . "</a> ";
+			// Get the URL pointing to the post, pages if nore than one
+			if ($responses_count->max_num_pages > 1) {
+				echo "<li><a href='" . $topicPermalink . "page/" . $responses_count->max_num_pages . "/#post-" . $lastResponseID . "'>" . $topicTitle  . "</a> ";
+			} else {
+				echo "<li><a href='" . $topicPermalink . "#post-" . $lastResponseID . "'>" . $topicTitle  . "</a> ";
+			}
 			if ($response) {
 				echo "<span>Last reply " . $lastResponseTime . " ago by <span>" . $lastResponseAuthor . "</span></span>";
 			} else {
