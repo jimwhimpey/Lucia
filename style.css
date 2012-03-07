@@ -643,6 +643,12 @@ table.results {
 				}
 				
 				.forum .bbp-reply-form textarea { margin-bottom: 0; }
+	
+	.bbp-pagination-links a,
+	.bbp-pagination-links span {
+		font-size: 30px;
+		padding: 0 5px;
+	}
 
 
 /******************************************************************************/
