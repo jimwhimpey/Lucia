@@ -104,7 +104,8 @@ div.nav ul {
 			div.nav ul li.current_page_ancestor a { color: #FFF; border-bottom: none; }
 			
 		div.nav ul li.current_page_item,
-		div.nav ul li.current_page_ancestor { background: #193660; }
+		div.nav ul li.current_page_ancestor,
+		div.nav ul li.current_page_parent { background: #193660; }
 	
 	div.nav ul.secondary {
 		background: #193660;

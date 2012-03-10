@@ -1,8 +1,9 @@
 <?php
 	if (!is_user_logged_in()) {
-		redirect_to_login_url();
+		header("Location: http://uqcycle.com/forum");
 	}
 ?>
+
 
 <?php get_header(); ?>
 	
