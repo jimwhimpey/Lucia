@@ -29,7 +29,7 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body>
+	<body <?php body_class($class); ?>>
 		<a href="<?php echo home_url( '/' ); ?>" id="mobile-header"><img src="<?php bloginfo('template_directory') ?>/images/header-mobile.gif" alt="UQ Cycle Club" /></a>
 		<h1 class="header">
 			<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>

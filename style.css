@@ -106,6 +106,8 @@ div.nav ul {
 		div.nav ul li.current_page_item,
 		div.nav ul li.current_page_ancestor,
 		div.nav ul li.current_page_parent { background: #193660; }
+		
+			.bbPress div.nav ul li.current_page_parent { background: none; }
 	
 	div.nav ul.secondary {
 		background: #193660;
