@@ -302,10 +302,16 @@ div.nav ul {
 
 .page .entry-content { padding: 0 30px; }
 
+	body.page .entry-content { padding: 0; }
+	
+	body.page-id-306 .entry-content { padding: 0 30px; } /* PMs */
+
 .page {
 	margin: 30px 0 0 0;
 	border-bottom: none;
 	}
+	
+	body.page { margin: 0 auto; }
 
 
 /******************************************************************************/
