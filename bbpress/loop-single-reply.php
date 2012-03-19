@@ -49,6 +49,8 @@
 
 			<?php bbp_reply_author_link( array( 'sep' => '', 'size' => '80' ) ); ?>
 
+			<p class="pm-link"><a href="<?php bloginfo('url'); ?>/private-messages/?page=rwpm_send&amp;recipient=<?php the_author(); ?>">PM</a></p>
+
 			<?php if ( is_super_admin() ) : ?>
 
 				<?php do_action( 'bbp_theme_before_reply_author_admin_details' ); ?>
