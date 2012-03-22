@@ -15,11 +15,11 @@
 		<fieldset class="bbp-form">
 			<div>
 					<label for="student-number">Student Number <span class="description">(If you are a current student)</span></label>
-					<input type="text" name="student-number" id="student-number" value="<?php echo esc_attr( get_the_author_meta( 'student-number', bbp_get_current_user_id() ) ); ?>" class="regular-text code" tabindex="104">
+					<input type="text" name="student-number" id="student-number" value="<?php echo esc_attr( get_the_author_meta( 'student-number', bbp_get_current_user_id() ) ); ?>" class="regular-text code" />
 				</div>
 				<div>
 					<label for="course">Course Studying <span class="description">(If you are a current student)</span></label>
-					<input type="text" name="course" id="course" value="<?php echo esc_attr( get_the_author_meta( 'course', bbp_get_current_user_id() ) ); ?>" class="regular-text" tabindex="105">
+					<input type="text" name="course" id="course" value="<?php echo esc_attr( get_the_author_meta( 'course', bbp_get_current_user_id() ) ); ?>" class="regular-text" />
 				</div>
 				<div>
 					<label for="international">International Student?</label>
@@ -30,7 +30,7 @@
 				</div>
 				<div>
 					<label for="graduation">Graduation Year <span class="description">(If you are a past student)</span></label>
-					<input type="text" name="graduation" id="graduation" value="<?php echo esc_attr( get_the_author_meta( 'graduation', bbp_get_current_user_id() ) ); ?>" class="regular-text" tabindex="107">
+					<input type="text" name="graduation" id="graduation" value="<?php echo esc_attr( get_the_author_meta( 'graduation', bbp_get_current_user_id() ) ); ?>" class="regular-text" />
 				</div>
 			</fieldset>
 			
