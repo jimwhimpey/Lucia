@@ -1,5 +1,60 @@
 <?php
+	
+	/******************************************************************************/
+	/* EXTRA USER FORM FIELDS */
+	
+	add_action( 'show_user_profile', 'my_show_extra_profile_fields' );
+	add_action( 'edit_user_profile', 'my_show_extra_profile_fields' );
+	add_action( 'bbp_user_edit_after', 'my_show_extra_profile_fields' );
 
+	function my_show_extra_profile_fields( $user ) { ?>
+
+		<h3 class="entry-title">UQ Student/Alumni Information</h3>
+		
+		
+		<fieldset class="bbp-form">
+			<div>
+					<label for="student-number">Student Number <span class="description">(If you are a current student)</span></label>
+					<input type="text" name="student-number" id="student-number" value="<?php echo esc_attr( get_the_author_meta( 'student-number', bbp_get_current_user_id() ) ); ?>" class="regular-text code" tabindex="104">
+				</div>
+				<div>
+					<label for="course">Course Studying <span class="description">(If you are a current student)</span></label>
+					<input type="text" name="course" id="course" value="<?php echo esc_attr( get_the_author_meta( 'course', bbp_get_current_user_id() ) ); ?>" class="regular-text" tabindex="105">
+				</div>
+				<div>
+					<label for="international">International Student?</label>
+					<select name="international" id="international">
+						<option value="no" <?php if (get_the_author_meta('international', bbp_get_current_user_id()) == "no") { echo "selected='selected'"; } ?>>No</option>
+						<option value="yes" <?php if (get_the_author_meta('international', bbp_get_current_user_id()) == "yes") { echo "selected='selected'"; } ?>>Yes</option>
+					</select>
+				</div>
+				<div>
+					<label for="graduation">Graduation Year <span class="description">(If you are a past student)</span></label>
+					<input type="text" name="graduation" id="graduation" value="<?php echo esc_attr( get_the_author_meta( 'graduation', bbp_get_current_user_id() ) ); ?>" class="regular-text" tabindex="107">
+				</div>
+			</fieldset>
+			
+	<?php }
+	
+	add_action( 'personal_options_update', 'my_save_extra_profile_fields' );
+	add_action( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
+	add_action( 'bbp_user_profile_update', 'my_save_extra_profile_fields' );
+
+	function my_save_extra_profile_fields( $user_id ) {
+
+		echo "test";
+
+		if ( !current_user_can( 'edit_user', $user_id ) )
+			return false;
+
+		update_usermeta( $user_id, 'student-number', $_POST['student-number'] );
+		update_usermeta( $user_id, 'course', $_POST['course'] );
+		update_usermeta( $user_id, 'international', $_POST['international'] );
+		update_usermeta( $user_id, 'graduation', $_POST['graduation'] );
+		
+	}
+	
+	
 	/******************************************************************************/
 	/* CUSTOM LOGIN LOGO */
 

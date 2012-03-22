@@ -680,6 +680,7 @@ table.results {
 		.forum .bbp-topic-form textarea,
 		.forum .bbp-reply-form textarea,
 		#bbp-your-profile input,
+		#bbp-your-profile select,
 		.private-messages textarea,
 		.private-messages .subject,
 		.private-messages select {
@@ -805,7 +806,12 @@ table.results {
 		color: #999;
 		}
 
-#bbp-your-profile input { margin-bottom: 15px; }		
+#bbp-your-profile input,
+#bbp-your-profile select { margin-bottom: 15px; }		
+	
+	#bbp-your-profile input#graduation { width: 120px; }
+
+	#bbp-your-profile select { width: auto; }
 
 #bbp-your-profile .submit {
 	margin: 50px 0 0 0;
