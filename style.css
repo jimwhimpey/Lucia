@@ -302,7 +302,7 @@ div.nav ul {
 
 .page .entry-content { padding: 0 30px; }
 
-	body.page .entry-content { padding: 0 30px; }
+	body.home .entry-content { padding: 0; }
 	
 	body.page-id-306 .entry-content { padding: 0 30px; } /* PMs */
 
