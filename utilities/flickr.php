@@ -8,6 +8,7 @@
 			// Get the Calendar data from Flickr
 			$contents = file_get_contents("http://api.flickr.com/services/feeds/photos_public.gne?id=42612547@N03&lang=en-us&format=json");
 			$contents = preg_replace('/^jsonFlickrFeed\(|\)$/', '', $contents);
+			$contents = str_replace("\'", "'", $contents);
 			$json = json_decode($contents);
 
 			// Loop through the items
