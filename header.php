@@ -14,7 +14,6 @@
 		<title><?php get_template_part('utilities/title'); ?></title>
 		
 		<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/favicon.png" />
-		<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/images/icon.png"/>
 		
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
 		<!--[if IE 6]>

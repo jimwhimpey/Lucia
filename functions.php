@@ -78,10 +78,12 @@
 	remove_filter('pre_post','force_balance_tags');
 	remove_filter('pre_post','bb_encode_bad',10);
 	remove_filter('pre_post','bb_code_trick',10);
-	remove_filter('post_text','make_clickable');
+	remove_filter('post_text','make_clickable' 1);
 	remove_filter('edit_text','bb_code_trick_reverse',10);
 	remove_filter('edit_text','htmlspecialchars',10);
 	remove_filter('pre_post','bb_filter_kses',50);
+	remove_filter('bbp_get_topic_content', 'make_clickable', 9);
+	remove_filter('bbp_get_topic_content', 'make_clickable', 9);
 	add_filter('post_text','Markdown', 6);
 	add_filter('post_text','force_balance_tags',9);
 	add_filter('post_text', 'mdwp_hide_tags', 49);
