@@ -78,7 +78,7 @@
 	remove_filter('pre_post','force_balance_tags');
 	remove_filter('pre_post','bb_encode_bad',10);
 	remove_filter('pre_post','bb_code_trick',10);
-	remove_filter('post_text','make_clickable' 1);
+	remove_filter('post_text','make_clickable', 1);
 	remove_filter('edit_text','bb_code_trick_reverse',10);
 	remove_filter('edit_text','htmlspecialchars',10);
 	remove_filter('pre_post','bb_filter_kses',50);
@@ -129,3 +129,32 @@
 	}
 	
 ?>
+
+	<?php
+	
+		/******************************************************************************/
+		/* CSV LIST OF STUDENTS */
+	
+		/*$students = $wpdb->get_results( "SELECT DISTINCT * FROM wp_usermeta WHERE meta_key = 'studentnumber' OR meta_key = 'graduation'" );
+		
+		echo "First Name, Surname, Student Number, Course, Graduation, International <br />";
+		
+		foreach ( $students as $student ) {
+
+			echo $wpdb->get_var("SELECT meta_value FROM wp_usermeta WHERE user_id = " . $student->user_id . " AND meta_key = 'first_name'");
+			echo ", ";
+			echo $wpdb->get_var("SELECT meta_value FROM wp_usermeta WHERE user_id = " . $student->user_id . " AND meta_key = 'last_name'");
+			echo ", ";
+			echo $wpdb->get_var("SELECT meta_value FROM wp_usermeta WHERE user_id = " . $student->user_id . " AND meta_key = 'studentnumber'");
+			echo ", ";
+			echo $wpdb->get_var("SELECT meta_value FROM wp_usermeta WHERE user_id = " . $student->user_id . " AND meta_key = 'course'");
+			echo ", ";
+			echo $wpdb->get_var("SELECT meta_value FROM wp_usermeta WHERE user_id = " . $student->user_id . " AND meta_key = 'graduation'");
+			echo ", ";
+			echo $wpdb->get_var("SELECT meta_value FROM wp_usermeta WHERE user_id = " . $student->user_id . " AND meta_key = 'international'");
+			
+			echo "<br />";
+			
+		}*/
+	
+	?>
